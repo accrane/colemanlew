@@ -55,15 +55,26 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 // cusotm tax
    register_taxonomy( 'focus_area', 'position',
-   array( 
-    'hierarchical' => true, // true = acts like categories false = acts like tags
-    'label' => 'Focus Area', 
-    'query_var' => true, 
-    'rewrite' => true ,
-    'show_admin_column' => true,
-    'public' => true,
-    'rewrite' => array( 'slug' => 'focus-area' ),
-    '_builtin' => true
-  ) );
+     array( 
+      'hierarchical' => true, // true = acts like categories false = acts like tags
+      'label' => 'Focus Area', 
+      'query_var' => true, 
+      'rewrite' => true ,
+      'show_admin_column' => true,
+      'public' => true,
+      'rewrite' => array( 'slug' => 'focus-area' ),
+      '_builtin' => true
+    ) );
+   register_taxonomy( 'status', 'position',
+     array( 
+      'hierarchical' => true, // true = acts like categories false = acts like tags
+      'label' => 'Status', 
+      'query_var' => true, 
+      'rewrite' => true ,
+      'show_admin_column' => true,
+      'public' => true,
+      'rewrite' => array( 'slug' => 'status' ),
+      '_builtin' => true
+    ) );
   
 } // End build taxonomies

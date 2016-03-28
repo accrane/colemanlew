@@ -33,11 +33,54 @@
 	position: relative;
 	margin: -200px 0 0 0;
 	z-index: 1;
+	line-height: 0;
 
 	img {width: 100%;}
 }
+.hero-headline-box {
+	width: 100%;
+	position: absolute;
+	top: 45%;
+	line-height: 1.2;
+}
+.hero-headline, .hero-headline-sub-1, .hero-headline-sub-2
+{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+}
+.hero-headline {
+	font: {
+		family: $font__main;
+		size: 24px;
+	}
+	margin: 0 0 10px 0;
+	@media screen and (min-width: $tabwidth) {
+		font-size: 30px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 46px;
+	}
+}
+.hero-headline-sub-1, .hero-headline-sub-2 {
+	font: {
+		family: $font__main;
+		size: 18px;
+	}
+	
+	@media screen and (min-width: $tabwidth) {
+		font-size: 22px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 24px;
+	}
+}
 // Our Process
 section.process {
+
+	overflow: hidden;
+	padding: 5% 0 5% 0;
 
 	h2 {
 		font: {
@@ -88,6 +131,16 @@ section.process {
 	top: 35%;
 	font: {
 		size: 26px;
+	}
+
+	@media screen and (min-width: $tabwidth) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: $midwidth) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 26px;
 	}
 }
 .step-title {
@@ -157,6 +210,8 @@ section.process {
 	}
 }
 section.about {
+	line-height: 0;
+
 	.map {
 		width: 100%;
 		position: relative;
@@ -177,6 +232,7 @@ section.about {
 	.map-contents {
 		width: 100%;
 		position: relative;
+		line-height: 1.3;
 		z-index: 5;
 		float: right;
 		padding: 5%;
@@ -230,7 +286,8 @@ section.news-resources {
 
 			&.first-post {
 				border-right: 1px solid $color-dark-grey;
-				margin: 0 3% 20px 0;
+				margin: 0 2% 20px 0;
+				padding: 0 2% 0 0;
 			}
 			&.last-post {
 				border-right: 0px solid $color-dark-grey;
@@ -267,15 +324,19 @@ section.news-resources {
 	@media screen and (min-width: $deskwidth) {
 		
 	}
+
 }
 .focus-block {
 	width: 100%;
 	position: relative;
 	margin: 0;
-
+	overflow: hidden;
+	
 	img {
 		width: 100%;
 		line-height: 0;
+		transform: scale(1.05);
+		@include transition(all .3s ease-out);
 	}
 
 	a {
@@ -289,6 +350,12 @@ section.news-resources {
   		//padding-bottom: 100%;
 	}
 
+	&:hover {
+		img {
+			transform: scale(1.2);
+		}
+	}
+
 	@media screen and (min-width: $tabwidth) {
 		width: 25%;
 		float: left;
@@ -297,14 +364,44 @@ section.news-resources {
 		
 	}
 }
+.focus-block-pad {padding: 10%;}
 .focus-block-first-info {
 	padding: 10%;
 
-	@media screen and (min-width: $tabwidth) {
-		
+	h3 {
+		margin: 0 0 10px 0;
+		line-height: 1;
+		font: {
+			family: $font__heading;
+			style: 700;
+			size: 20px;
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			font-size: 22px;
+		}
+		@media screen and (min-width: $midwidth) {
+			margin: 20px 0 15px 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 30px;
+			margin: 0 0 15px 0;
+		}
 	}
-	@media screen and (min-width: $deskwidth) {
-		
+	p {
+		margin: 0;
+		font: {
+			family: $font__heading;
+			style: 700;
+			size: 20px;
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 24px;
+		}
 	}
 }
 .focus-block-info {
@@ -316,6 +413,26 @@ section.news-resources {
 	color: #fff;
 	text-align: center;
 
+	h2 {
+		width: 90%;
+		margin: 10% auto 0 auto;
+		line-height: 1.2;
+		text-shadow: 0px 1px 3px rgba(30, 30, 30, 1);
+		font: {
+			family: $font__heading;
+			style: 700;
+			size: 20px;
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			font-size: 22px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 33px;
+			margin: 30% auto 0 auto;
+		}
+	}
+
 	@media screen and (min-width: $tabwidth) {
 		
 	}
@@ -324,7 +441,8 @@ section.news-resources {
 	}
 }
 .focus-block-plus {
-
+	width: 30px;
+	margin: 10px auto;
 	@media screen and (min-width: $tabwidth) {
 		
 	}

@@ -15,7 +15,7 @@ $content = get_field('page_content');
 $steps = get_field('process');
 
 ?>
-
+<div class="wrapper">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -41,5 +41,7 @@ $steps = get_field('process');
 <?php get_template_part('template-parts/process-steps') ?>
 
 <?php
-endwhile; // End of the loop.
+endwhile; // End of the loop. ?>
+</div><!-- wrapper -->
+<?php 
 get_footer();

@@ -114,6 +114,7 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('.js-blocks').matchHeight();
+	$('.js-paragraph').matchHeight();
 
 	/*
 	*

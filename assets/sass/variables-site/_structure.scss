@@ -8,6 +8,23 @@ $deskwidth: 1200px;
 .site {
 	position: relative;
 }
+div {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
@@ -139,49 +156,35 @@ body.home .top-header	{
 		color: #fff;
 	}
 }
-.hero-headline-box {
-	width: 100%;
-	position: absolute;
-	top: 45%;
-}
-.hero-headline, .hero-headline-sub-1, .hero-headline-sub-2
-{
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	font-weight: 300;
-}
-.hero-headline {
-	font: {
-		family: $font__main;
-		size: 24px;
+
+article {
+	.readmore {
+		width: auto;
+		position: relative;
+		display: inline-block;
 	}
-	margin: 0 0 10px 0;
-	@media screen and (min-width: $tabwidth) {
-		font-size: 30px;
-	}
-	@media screen and (min-width: $deskwidth) {
-		font-size: 46px;
-	}
-}
-.hero-headline-sub-1, .hero-headline-sub-2 {
-	font: {
-		family: $font__main;
-		size: 18px;
-	}
-	
-	@media screen and (min-width: $tabwidth) {
-		font-size: 22px;
-	}
-	@media screen and (min-width: $deskwidth) {
-		font-size: 24px;
+	.plus {
+		width: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }
 
 footer.site-footer {
 	background-color: $color-dark-grey;
+	color: #fff;
+	font-size: 12px;
 	width: 100%;
 	clear: both;
+	a {
+		text-decoration: none;
+		color: #fff;
+		@include transition(all .3s ease);
+		&:hover {
+			color: $color-red;
+		}
+	}
 	
 	@media screen and (min-width: $tabwidth) {
 		
@@ -189,4 +192,15 @@ footer.site-footer {
 	@media screen and (min-width: $deskwidth) {
 		
 	}
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon--plus > path {
+    
+    fill: #fff;
+    stroke: rgba(255,255,255,0);
+    stroke-width: 0.5;
+    // stroke-linejoin: round;
 }

@@ -94,13 +94,16 @@ get_header(); ?>
 				echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
 					// pop an image off;
 					$element = array_pop($images);
-					echo '<img src="'.$element['sizes']['medium'] .'" alt="'.$element['alt'].'" />';
+					echo '<img src="'.$element['sizes']['large-square'] .'" alt="'.$element['alt'].'" />';
 
 						// div info contents
 						echo '<div class="focus-block-info">';
-							echo '<h2>' . $category->name . '</h2>';
-							echo '<div class="focus-block-plus"></div>';
+							echo '<div class="focus-block-pad">';
+								echo '<h2>' . $category->name . '</h2>';
+								echo '<div class="focus-block-plus"><svg class="icon  icon--plus" viewBox="0 0 5 5" ><path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" /></svg></div>';
+							echo '</div><!-- focus block pad -->';
 						echo '</div><!-- focus block info -->';
+						
 					echo '</a>';
 				echo '</div><!-- focus block -->';
 					
@@ -198,6 +201,11 @@ wp_reset_postdata();
 	 			<?php the_excerpt(); ?>
 	 			<div class="readmore">
 	 				<a href="<?php the_permalink(); ?>">Continue Reading</a>
+	 				<div class="plus">
+		 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
+						    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
+						</svg>
+					</div><!-- plus -->
 	 			</div>
 	 		</article>
 	 	<?php endwhile; endif; ?>
