@@ -129,7 +129,7 @@ get_header(); ?>
 */
 $post = get_post(9); 
 setup_postdata( $post );
-	echo '<div class="wrapper">';
+	echo '<div class="content-wrapper">';
 	get_template_part('template-parts/process-steps');
 	echo '</div>';
 

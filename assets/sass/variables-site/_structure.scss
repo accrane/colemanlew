@@ -40,17 +40,36 @@ div {
 		padding: 20px 5%;
 	}
 }
+.content-wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+		padding: 20px 10%;
+	}
+}
+header#masthead {
+	border-bottom: 1px solid #E5E5E4;
+}
 body.home header#masthead {
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
+	border-bottom: 0px solid #333;
 }
 .content-area {
 	width: 100%;
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 66%;
+		width: 60%;
 		float: left;
 		margin: 0;
 	}
@@ -64,9 +83,9 @@ body.home header#masthead {
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 26%;
+		width: 32%;
 		float: right;
-		margin: 0;
+		margin: 50px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/

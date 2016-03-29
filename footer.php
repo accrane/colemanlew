@@ -18,8 +18,25 @@
 			<div class="site-info">
 				<?php 
 				$sitemap = get_field('sitemap_link', 'option');
-				echo '&copy; ' . date('Y') . ' | <a href="'. $sitemap . '">Sitemap</a> | Site by <a href="http://bellworksweb.com/?ref=colemanlew">Bellaworks</a>'; 
+				$address = get_field('address', 'option');
 
+				// Footer Right
+				echo '<div class="footer-left">';
+					echo $address;
+					echo '<br>';
+					echo '&copy;' . date('Y');
+					echo get_bloginfo('name');
+					echo ' // ';
+					echo '<a href="'. get_bloginfo('url') . '/privacy-statement">Privacy Statement</a>';
+					echo ' // ';
+					echo '<a href="'. get_bloginfo('url') . '/legal-statement">Legal Statement</a>';
+				echo '</div><!-- footer left -->';
+
+				// Footer Left
+				echo '<div class="footer-right">';
+					echo '<a href="'. $sitemap . '">Sitemap</a> // Site by <a href="http://bellworksweb.com/?ref=colemanlew">Bellaworks</a>';
+				echo '</div><!-- footer right -->';
+				 
 				 ?>
 			</div><!-- .site-info -->
 	</div><!-- wrapper -->

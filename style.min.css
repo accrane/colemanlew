@@ -1,4 +1,4 @@
-/*!
+@charset "UTF-8";/*!
 Theme Name: Coleman Lew
 Theme URI: http://bellaworksweb.com/
 Author: Austin Crane
@@ -553,12 +553,15 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .wrapper{width:100%;margin:0 auto;padding:20px;overflow:hidden;position:relative}
 @media screen and (min-width:1200px){.wrapper{padding:20px 5%}
-}body.home header#masthead{overflow:hidden;position:relative;z-index:2}
+}.content-wrapper{width:100%;margin:0 auto;padding:20px;overflow:hidden;position:relative}
+@media screen and (min-width:1200px){.content-wrapper{padding:20px 10%}
+}header#masthead{border-bottom:1px solid #e5e5e4}
+body.home header#masthead{overflow:hidden;position:relative;z-index:2;border-bottom:0 solid #333}
 .content-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
+@media screen and (min-width:600px){.content-area{width:60%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
+@media screen and (min-width:600px){.widget-area{width:32%;float:right;margin:50px 0 0 0}
 }@media screen and (min-width:1200px){}
 .logo,h1.logo{width:280px;height:76px;background-image:url(images/logo.png);background-size:cover;background-repeat:no-repeat;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:200px;height:55px;float:left;margin:0}
@@ -633,6 +636,11 @@ code,kbd,tt,var{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",mon
 abbr,acronym{border-bottom:1px dotted #666;cursor:help}
 mark,ins{background:#fff9c0;text-decoration:none}
 big{font-size:125%}
+.coleman-lew-red{color:#d61e36}
+.entry-content{font-family:"Ubuntu",sans-serif;font-size:17px}
+.entry-content ul{list-style:none;padding:0;margin:0 0 20px 20px}
+.entry-content li{padding-left:10px;text-indent:0}
+.entry-content li:before{content:"■";color:#d61e36;font-family:"Arial Black";padding:10px;margin-top:5px}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
 body{background:#fff}
@@ -781,67 +789,126 @@ html[xmlns] .flexslider .slides{display:block}
 .soc a{position:relative;width:30px;height:30px}
 .soc svg{height:100%;width:100%}
 .soc em{font-size:14px;line-height:1.5;margin-top:-.75em;position:absolute;text-align:center;top:50%;right:0;bottom:0;left:0}
-.icon-1:hover,.icon-2:hover,.icon-3:hover,.icon-4:hover,.icon-5:hover,.icon-6:hover,.icon-7:hover,.icon-8:hover,.icon-9:hover,.icon-10:hover,.icon-11:hover,.icon-12:hover,.icon-13:hover,.icon-14:hover,.icon-15:hover,.icon-16:hover,.icon-17:hover,.icon-18:hover,.icon-19:hover,.icon-20:hover,.icon-21:hover,.icon-22:hover,.icon-23:hover,.icon-24:hover,.icon-25:hover,.icon-26:hover,.icon-27:hover,.icon-28:hover,.icon-29:hover,.icon-30:hover{border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
-.icon-1{color:white;fill:white}
-.icon-1:hover{background:rgba(255,255,255,0)}
-.icon-2{color:white;fill:white}
-.icon-2:hover{background:rgba(255,255,255,0)}
-.icon-3{color:white;fill:white}
-.icon-3:hover{background:rgba(255,255,255,0)}
-.icon-4{color:white;fill:white}
-.icon-4:hover{background:rgba(255,255,255,0)}
-.icon-5{color:white;fill:white}
-.icon-5:hover{background:rgba(255,255,255,0)}
-.icon-6{color:white;fill:white}
-.icon-6:hover{background:rgba(255,255,255,0)}
-.icon-7{color:white;fill:white}
-.icon-7:hover{background:rgba(255,255,255,0)}
-.icon-8{color:white;fill:white}
-.icon-8:hover{background:rgba(255,255,255,0)}
-.icon-9{color:white;fill:white}
-.icon-9:hover{background:rgba(255,255,255,0)}
-.icon-10{color:white;fill:white}
-.icon-10:hover{background:rgba(255,255,255,0)}
-.icon-11{color:white;fill:white}
-.icon-11:hover{background:rgba(255,255,255,0)}
-.icon-12{color:white;fill:white}
-.icon-12:hover{background:rgba(255,255,255,0)}
-.icon-13{color:white;fill:white}
-.icon-13:hover{background:rgba(255,255,255,0)}
-.icon-14{color:white;fill:white}
-.icon-14:hover{background:rgba(255,255,255,0)}
-.icon-15{color:white;fill:white}
-.icon-15:hover{background:rgba(255,255,255,0)}
-.icon-16{color:white;fill:white}
-.icon-16:hover{background:rgba(255,255,255,0)}
-.icon-17{color:white;fill:white}
-.icon-17:hover{background:rgba(255,255,255,0)}
-.icon-18{color:white;fill:white}
-.icon-18:hover{background:rgba(255,255,255,0)}
-.icon-19{color:white;fill:white}
-.icon-19:hover{background:rgba(255,255,255,0)}
-.icon-20{color:white;fill:white}
-.icon-20:hover{background:rgba(255,255,255,0)}
-.icon-21{color:white;fill:white}
-.icon-21:hover{background:rgba(255,255,255,0)}
-.icon-22{color:white;fill:white}
-.icon-22:hover{background:rgba(255,255,255,0)}
-.icon-23{color:white;fill:white}
-.icon-23:hover{background:rgba(255,255,255,0)}
-.icon-24{color:white;fill:white}
-.icon-24:hover{background:rgba(255,255,255,0)}
-.icon-25{color:white;fill:white}
-.icon-25:hover{background:rgba(255,255,255,0)}
-.icon-26{color:white;fill:white}
-.icon-26:hover{background:rgba(255,255,255,0)}
-.icon-27{color:white;fill:white}
-.icon-27:hover{background:rgba(255,255,255,0)}
-.icon-28{color:white;fill:white}
-.icon-28:hover{background:rgba(255,255,255,0)}
-.icon-29{color:white;fill:white}
-.icon-29:hover{background:rgba(255,255,255,0)}
-.icon-30{color:white;fill:white}
-.icon-30:hover{background:rgba(255,255,255,0)}
+.icon-white-1{color:white;fill:white}
+.icon-white-1:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-2{color:white;fill:white}
+.icon-white-2:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-3{color:white;fill:white}
+.icon-white-3:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-4{color:white;fill:white}
+.icon-white-4:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-5{color:white;fill:white}
+.icon-white-5:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-6{color:white;fill:white}
+.icon-white-6:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-7{color:white;fill:white}
+.icon-white-7:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-8{color:white;fill:white}
+.icon-white-8:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-9{color:white;fill:white}
+.icon-white-9:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-10{color:white;fill:white}
+.icon-white-10:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-11{color:white;fill:white}
+.icon-white-11:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-12{color:white;fill:white}
+.icon-white-12:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-13{color:white;fill:white}
+.icon-white-13:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-14{color:white;fill:white}
+.icon-white-14:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-15{color:white;fill:white}
+.icon-white-15:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-16{color:white;fill:white}
+.icon-white-16:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-17{color:white;fill:white}
+.icon-white-17:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-18{color:white;fill:white}
+.icon-white-18:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-19{color:white;fill:white}
+.icon-white-19:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-20{color:white;fill:white}
+.icon-white-20:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-21{color:white;fill:white}
+.icon-white-21:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-22{color:white;fill:white}
+.icon-white-22:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-23{color:white;fill:white}
+.icon-white-23:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-24{color:white;fill:white}
+.icon-white-24:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-25{color:white;fill:white}
+.icon-white-25:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-26{color:white;fill:white}
+.icon-white-26:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-27{color:white;fill:white}
+.icon-white-27:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-28{color:white;fill:white}
+.icon-white-28:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-29{color:white;fill:white}
+.icon-white-29:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-white-30{color:white;fill:white}
+.icon-white-30:hover{background:rgba(255,255,255,0);border-radius:100%;color:#fff;fill:#fff;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-1{color:black;fill:black}
+.icon-black-1:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-2{color:black;fill:black}
+.icon-black-2:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-3{color:black;fill:black}
+.icon-black-3:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-4{color:black;fill:black}
+.icon-black-4:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-5{color:black;fill:black}
+.icon-black-5:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-6{color:black;fill:black}
+.icon-black-6:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-7{color:black;fill:black}
+.icon-black-7:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-8{color:black;fill:black}
+.icon-black-8:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-9{color:black;fill:black}
+.icon-black-9:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-10{color:black;fill:black}
+.icon-black-10:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-11{color:black;fill:black}
+.icon-black-11:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-12{color:black;fill:black}
+.icon-black-12:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-13{color:black;fill:black}
+.icon-black-13:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-14{color:black;fill:black}
+.icon-black-14:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-15{color:black;fill:black}
+.icon-black-15:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-16{color:black;fill:black}
+.icon-black-16:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-17{color:black;fill:black}
+.icon-black-17:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-18{color:black;fill:black}
+.icon-black-18:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-19{color:black;fill:black}
+.icon-black-19:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-20{color:black;fill:black}
+.icon-black-20:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-21{color:black;fill:black}
+.icon-black-21:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-22{color:black;fill:black}
+.icon-black-22:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-23{color:black;fill:black}
+.icon-black-23:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-24{color:black;fill:black}
+.icon-black-24:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-25{color:black;fill:black}
+.icon-black-25:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-26{color:black;fill:black}
+.icon-black-26:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-27{color:black;fill:black}
+.icon-black-27:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-28{color:black;fill:black}
+.icon-black-28:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-29{color:black;fill:black}
+.icon-black-29:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
+.icon-black-30{color:black;fill:black}
+.icon-black-30:hover{background:transparent;border-radius:100%;color:#000;fill:#000;-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25);-webkit-transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,-webkit-transform .5s ease-out;transition:background-color .5s,transform .5s ease-out;transition:background-color .5s,transform .5s ease-out,-webkit-transform .5s ease-out}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .sticky{display:block}
@@ -915,6 +982,7 @@ section.news-resources article a:hover{color:rgba(255,255,255,0.6);padding:10px 
 @media screen and (min-width:600px){.focus-block-info h2{font-size:22px}
 }@media screen and (min-width:1200px){.focus-block-info h2{font-size:33px;margin:30% auto 0 auto}
 }.focus-block-plus{width:30px;margin:10px auto}
+blockquote.chair{background-color:#d61e36;background-image:url(images/chair-blockquote.png);background-repeat:no-repeat;background-position:bottom 5px right 5px;padding:10% 10% 20% 10%;color:#fff;font-family:"Roboto Condensed",sans-serif;font-size:30px;font-weight:400}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

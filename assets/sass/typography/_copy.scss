@@ -43,3 +43,30 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+.coleman-lew-red {color: $color-red;}
+.entry-content {
+	 
+	 font: {
+	 	family: $font__main;
+	 	size: 17px;
+	 }
+
+	 ul {
+	    list-style: none;
+	    padding:0;
+	    margin:0 0 20px 20px;
+	}
+
+	li { 
+	    padding-left: 10px; 
+	    text-indent: 0;
+	}
+
+	li:before {
+	    content: "■";
+	    color: $color-red; 
+	    font-family:"Arial Black";
+	    padding: 10px;
+	    margin-top: 5px;
+	}
+}

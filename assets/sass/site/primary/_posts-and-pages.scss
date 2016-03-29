@@ -459,3 +459,18 @@ section.news-resources {
 		
 	}
 }
+blockquote.chair {
+	background: {
+		color: $color-red;
+		image: url(images/chair-blockquote.png);
+		repeat: no-repeat;
+		position: bottom 5px right 5px;
+	}
+	padding: 10% 10% 20% 10%;
+	color: #fff;
+	font: {
+		family: $font__heading;
+		size: 30px;
+		weight: 400;
+	}
+}
