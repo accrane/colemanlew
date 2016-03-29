@@ -55,6 +55,21 @@ div {
 		padding: 20px 10%;
 	}
 }
+.small-wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 60%;
+		padding: 20px 10%;
+	}
+}
 header#masthead {
 	border-bottom: 1px solid #E5E5E4;
 }

@@ -66,6 +66,20 @@ endwhile; // End of the loop. ?>
 ################################################-->
 <section class="current-search-assignments">
 <?php
+
+/*  
+*		Query Our Current Assignments Page's Content
+*/
+$post = get_post(17); 
+setup_postdata( $post );
+	echo '<h2 class="entry-title js-last-word">Current Search Assignments</h2>';
+	echo '<div class="small-wrapper center-text entry-content">';
+	the_content();
+	echo '</div>';
+
+wp_reset_postdata();
+
+
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
 		'post_type'=>'position',
@@ -80,14 +94,23 @@ endwhile; // End of the loop. ?>
 		)
 	));
 	if ($wp_query->have_posts()) : ?>
-	<div class="flexslider">
+	<div class="flexslider carousel">
 		<ul class="slides">
 			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
 
 ?>	
 			<li>
-				<?php the_title(); ?>
+				<div class="jobsquare ">
+					<a href="<?php the_permalink(); ?>">
+						<h3><?php the_title(); ?></h3>
+						<div class="focus-block-plus">
+			 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
+							    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
+							</svg>
+						</div><!-- plus -->
+					</a>
+				</div><!-- jobsquare -->
 			</li>
 
 			<?php endwhile; ?>
@@ -96,43 +119,7 @@ endwhile; // End of the loop. ?>
 <?php endif; ?>
 </section>
 
-<script type="text/javascript">
-	(function() {
-	 
-	  // store the slider in a local variable
-	  var $window = $(window),
-	      flexslider;
-	 
-	  // tiny helper function to add breakpoints
-	  function getGridSize() {
-	    return (window.innerWidth < 600) ? 2 :
-	           (window.innerWidth < 900) ? 3 : 4;
-	  }
-	 
-	  $(function() {
-	    SyntaxHighlighter.all();
-	  });
-	 
-	  $window.load(function() {
-	    $('.flexslider').flexslider({
-	      animation: "slide",
-	      animationLoop: false,
-	      itemWidth: 210,
-	      itemMargin: 5,
-	      minItems: getGridSize(), // use function to pull in initial value
-	      maxItems: getGridSize() // use function to pull in initial value
-	    });
-	  });
-	 
-	  // check grid size on resize event
-	  $window.resize(function() {
-	    var gridSize = getGridSize();
-	 
-	    flexslider.vars.minItems = gridSize;
-	    flexslider.vars.maxItems = gridSize;
-	  });
-	}());
-</script>
+
 
 <?php 
 get_footer();
