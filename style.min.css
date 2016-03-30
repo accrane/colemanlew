@@ -577,6 +577,7 @@ body.home header#masthead{overflow:hidden;position:relative;z-index:2;border-bot
 @media screen and (min-width:600px){.top-header nav{margin:5px 10px 0 0}
 }.top-header nav li{width:auto;display:inline-block;padding:5px 10px;font-family:"Ubuntu",sans-serif;font-size:13px}
 .top-header nav a{color:#404041;text-decoration:none}
+.top-header nav a:hover,.top-header nav a.active{color:#d61e36}
 @media screen and (min-width:600px){.top-header{width:auto;display:inline-block;float:right;text-align:right}
 }body.home .top-header nav a{color:#fff}
 article .readmore{width:auto;position:relative;display:inline-block}
@@ -584,7 +585,11 @@ article .plus{width:20px;position:absolute;top:0;right:0}
 footer.site-footer{background-color:#404041;color:#fff;font-size:12px;width:100%;clear:both}
 footer.site-footer a{text-decoration:none;color:#fff;-webkit-transition:all .3s ease;transition:all .3s ease}
 footer.site-footer a:hover{color:#d61e36}
-.icon{display:inline-block;vertical-align:middle}
+footer.site-footer .footer-left{width:auto}
+@media screen and (min-width:600px){footer.site-footer .footer-left{float:left}
+}footer.site-footer .footer-right{width:auto;margin-top:15px}
+@media screen and (min-width:600px){footer.site-footer .footer-right{float:right}
+}.icon{display:inline-block;vertical-align:middle}
 .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
@@ -625,6 +630,7 @@ textarea{overflow:auto}
 optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
+button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Ubuntu",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
@@ -754,13 +760,13 @@ html[xmlns] .flexslider .slides{display:block}
 * html .flexslider .slides{height:1%}
 .no-js .flexslider .slides>li:first-child{display:block}
 .flexslider{width:100%;position:relative;zoom:1}
-.flexslider .jobsquare{position:relative;width:100%;float:left}
-.flexslider .jobsquare:after{content:"";display:block;padding-bottom:100%}
-.flexslider .jobsquare a{color:#000;border:1px solid #eee;display:block;height:100%;width:100%;position:absolute;text-decoration:none;background-image:url(images/chair-outline-black.png);background-repeat:no-repeat;background-position:bottom 0 right 0;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
-.flexslider .jobsquare a .icon--plus>path{fill:#000;stroke:rgba(255,255,255,0);stroke-width:.5}
-.flexslider .jobsquare a:hover{background-color:#d61e36;color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
-.flexslider .jobsquare a:hover .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
-.flexslider .jobsquare h3{display:block;width:90%;margin:20% auto 0 auto;text-align:center;text-transform:uppercase;font-font-family:"Roboto Condensed",sans-serif;font-size:21px;font-weight:400}
+.flexslider .jobsquare-slider{position:relative;width:100%;float:left}
+.flexslider .jobsquare-slider:after{content:"";display:block;padding-bottom:100%}
+.flexslider .jobsquare-slider a{color:#000;border:1px solid #eee;display:block;height:100%;width:100%;position:absolute;text-decoration:none;background-image:url(images/chair-outline-black.png);background-repeat:no-repeat;background-position:bottom 0 right 0;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
+.flexslider .jobsquare-slider a .icon--plus>path{fill:#000;stroke:rgba(255,255,255,0);stroke-width:.5}
+.flexslider .jobsquare-slider a:hover{background-color:#d61e36;color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
+.flexslider .jobsquare-slider a:hover .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
+.flexslider .jobsquare-slider h3{display:block;width:90%;margin:20% auto 0 auto;text-align:center;text-transform:uppercase;font-font-family:"Roboto Condensed",sans-serif;font-size:21px;font-weight:400}
 .flexslider ul.slides{width:100%}
 @media screen and (min-width:1200px){.flexslider ul.slides{width:70%;margin:0 auto}
 }.flexslider .slides{zoom:1}
@@ -1001,21 +1007,32 @@ nav.assignments{background-color:#231f20;color:#fff;text-align:center}
 nav.assignments button.filter-assignments{width:auto;position:relative;padding:10px 20px;display:inline-block;background-color:transparent;text-shadow:0 1px 0 rgba(255,255,255,0);box-shadow:none;border:0;color:#fff;font-family:"Roboto Condensed",sans-serif;font-weight:700;font-size:24px}
 nav.assignments button.filter-assignments .arrow-toggle{width:20px;position:absolute;top:10px;right:-10px}
 nav.assignments button.filter-assignments .arrow{fill:#fff}
-section.assignment-links{text-align:center;background-color:#f1f1f2}
+section.js-toggled-on{max-height:1000px;-webkit-transition:all ease-in-out 1s;transition:all ease-in-out 1s;padding-bottom:30px}
+section.js-toggled-off{max-height:0;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
+section.assignment-links{text-align:center;background-color:#f1f1f2;overflow:hidden}
 section.assignment-links ul{width:50%;display:inline-block;margin:40px 0 0 15%}
 section.assignment-links li{width:45%;float:left;text-align:left;list-style:none}
 section.assignment-links a{text-decoration:none;color:#231f20}
 section.assignment-links a:hover{color:#d61e36}
 section.pad{padding-bottom:40px}
-section.no-pad{padding-bottom:0}
+.no-pad{padding-bottom:0}
 section.completed .jobsquare{position:relative;width:100%;float:left}
 @media screen and (min-width:600px){section.completed .jobsquare{width:18%;margin:1%}
 }section.completed .jobsquare:after{content:"";display:block;padding-bottom:100%}
-section.completed .jobsquare a{color:#000;border:1px solid #eee;display:block;height:100%;width:100%;position:absolute;text-decoration:none;background-image:url(images/chair-outline-black.png);background-repeat:no-repeat;background-position:bottom 0 right 0;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
+section.completed .jobsquare a{color:#000;border:1px solid #eee;display:block;height:100%;width:100%;position:absolute;text-decoration:none;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
 section.completed .jobsquare a .icon--plus>path{fill:#000;stroke:rgba(255,255,255,0);stroke-width:.5}
 section.completed .jobsquare a:hover{background-color:#d61e36;color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
 section.completed .jobsquare a:hover .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
-section.completed .jobsquare h3{display:block;width:90%;margin:20% auto 0 auto;text-align:center;text-transform:uppercase;font-font-family:"Roboto Condensed",sans-serif;font-size:21px;font-weight:400}
+section.completed .jobsquare a.job-active{background-image:url(images/chair-outline-black.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
+section.completed .jobsquare a.job-completed{background-image:url(images/chair-filled.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
+section.completed .jobsquare a.job-red{color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0;background-color:#d61e36}
+section.completed .jobsquare h3.current{text-align:center;text-transform:uppercase}
+section.completed .jobsquare h3.completed{text-align:left;text-transform:uppercase}
+section.completed .jobsquare h3.talk{text-align:left;text-transform:capitalize}
+section.completed .jobsquare h3{display:block;width:90%;margin:20% auto 0 auto;font-font-family:"Roboto Condensed",sans-serif;font-size:21px;font-weight:400}
+@media screen and (min-width:600px){section.completed .jobsquare h3{font-size:14px}
+}@media screen and (min-width:1200px){section.completed .jobsquare h3{font-size:21px}
+}section.completed .jobsquare p{display:block;width:90%;text-align:left;margin:10px auto 0 auto}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

@@ -17,15 +17,59 @@ jQuery(document).ready(function ($) {
         $(this).addClass("active");
         }
 	});
-	
+
+	/*
+	*
+	*	Assignment Links Toggle the Class
+	*
+	------------------------------------*/
+	$('.js-filter-button').on('click', function(e) {
+      $('.assignment-links').toggleClass("js-toggled-off js-toggled-on"); //toggle class
+      e.preventDefault();
+    });
 	/*
 	*
 	*	Flexslider
 	*
 	------------------------------------*/
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
+	// $('.flexslider').flexslider({
+	// 	animation: "slide",
+	// }); // end register 
+	(function() {
+	 
+	  // store the slider in a local variable
+	  var $window = $(window),
+	      flexslider;
+	 
+	  // tiny helper function to add breakpoints
+	  function getGridSize() {
+	    return (window.innerWidth < 600) ? 1 :
+	           (window.innerWidth < 900) ? 2 : 3;
+	  }
+	 
+	  $(function() {
+	    SyntaxHighlighter.all();
+	  });
+	 
+	  $window.load(function() {
+	    $('.flexslider').flexslider({
+	      animation: "slide",
+	      animationLoop: false,
+	      itemWidth: 210,
+	      itemMargin: 30,
+	      minItems: getGridSize(), // use function to pull in initial value
+	      maxItems: getGridSize() // use function to pull in initial value
+	    });
+	  });
+	 
+	  // check grid size on resize event
+	  $window.resize(function() {
+	    var gridSize = getGridSize();
+	 
+	    flexslider.vars.minItems = gridSize;
+	    flexslider.vars.maxItems = gridSize;
+	  });
+	}());
 	
 	/*
 	*

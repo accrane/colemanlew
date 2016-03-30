@@ -175,6 +175,9 @@ body.home header#masthead {
 	nav a {
 		color: $color-dark-grey;
 		text-decoration: none;
+		&:hover, &.active {
+			color: $color-red;
+		}
 	}
 
 	@media screen and (min-width: $tabwidth) {
@@ -217,6 +220,22 @@ footer.site-footer {
 		@include transition(all .3s ease);
 		&:hover {
 			color: $color-red;
+		}
+	}
+
+	.footer-left {
+		width: auto;
+
+		@media screen and (min-width: $tabwidth) {
+			float:left;
+		}
+	}
+	.footer-right {
+		width: auto;
+		margin-top: 15px;
+
+		@media screen and (min-width: $tabwidth) {
+			float:right;
 		}
 	}
 	

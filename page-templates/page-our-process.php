@@ -101,8 +101,8 @@ wp_reset_postdata();
 
 ?>	
 			<li>
-				<div class="jobsquare ">
-					<a href="<?php the_permalink(); ?>">
+				<div class="jobsquare-slider ">
+					<a class="" href="<?php the_permalink(); ?>">
 						<h3><?php the_title(); ?></h3>
 						<div class="focus-block-plus">
 			 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
