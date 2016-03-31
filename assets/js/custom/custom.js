@@ -109,10 +109,11 @@ jQuery(document).ready(function ($) {
 	*	Colorbox
 	*
 	------------------------------------*/
-	$('a.gallery').colorbox({
-		rel:'gal',
-		width: '80%', 
-		height: '80%'
+	$('a.professionals').colorbox({
+		inline:true,
+		rel: 'people',
+		width: '100%', 
+		height: '100%'
 	});
 	
 	/*

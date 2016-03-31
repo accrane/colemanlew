@@ -43,6 +43,7 @@ function acstarter_setup() {
 
   // Custom Image Sizes
   add_image_size( 'large-square', 400, 400, array( 'center', 'center' ) );
+  add_image_size( 'large-hero', 1400, 700, array( 'center', 'center' ) );
 
   /*
    * Switch default core markup for search form, comment form, and comments

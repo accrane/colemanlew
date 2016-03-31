@@ -759,3 +759,143 @@ article.news-post {
 	}
 
 }
+section.professionals {
+
+	.professional {
+		width: 100%;
+		position: relative;
+		float: left;
+		line-height: 0;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 20%;
+		}
+
+		& img {width: 100%;}
+
+
+	}
+
+	.professional-hover {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba($color-red,.7);
+			opacity: 0;
+			color: #fff;
+			@include transition(.3s ease-in-out all);
+			line-height: 1.2;
+			text-align: center;
+
+			a {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #fff;
+				text-decoration: none;
+				display: block;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			h2 {
+				margin: 40% 0 0px 0;
+				font: {
+					size: 26px;
+					family: $font__heading;
+					weight: 700;
+				}
+
+				@media screen and (min-width: $tabwidth) {
+					font-size: 14px;
+				}
+				@media screen and (min-width: $midwidth) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 26px;
+				}
+			}
+
+			.position {
+				font: {
+					size: 24px;
+					family: $font__heading;
+					weight: 300;
+				}
+				@media screen and (min-width: $tabwidth) {
+					font-size: 12px;
+				}
+				@media screen and (min-width: $midwidth) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 24px;
+				}
+			}
+		}
+}
+.profess-popup {
+	width: 100%;
+	background-color: #000;
+	height: 100%;
+	position: relative;
+	margin-top: 50px;
+
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 50px;
+	}
+	@media screen and (min-width: $midwidth) {
+		margin-top: 130px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		margin-top: 118px;
+	}
+}
+.pop-fade {
+	width: 100%;
+	position: relative;
+	z-index: 8;
+	@media screen and (min-width: $tabwidth) {
+		width: 90%;
+		//height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+33,000000+100&0.65+46,0+100 */
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 33%, rgba(0,0,0,0.65) 46%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+	}
+}
+.pop-image {
+	width: 100%;
+	z-index: 7;
+	position: relative;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 45%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	img {
+		width: 100%;
+	}
+}
+.pop-content {
+	color: #fff;
+	width: 40%;
+	float: left;
+	position: relative;
+	z-index: 10;
+	margin: 10%;
+}
