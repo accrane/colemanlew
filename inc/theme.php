@@ -6,7 +6,7 @@
  *
  * @package ACStarter
  */
-
+show_admin_bar( false );
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
@@ -138,3 +138,15 @@ function change_post_object_label() {
     }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
+
+
+
+// Excerpt Function
+function get_excerpt($count){
+  // whatever you want to append on the end of the last word
+  $words = '...';
+  $excerpt = get_the_content();
+  $excerpt = strip_tags($excerpt);
+  $excerpt = wp_trim_words($excerpt, $count, $words);
+  return $excerpt;
+}

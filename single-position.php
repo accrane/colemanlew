@@ -18,6 +18,8 @@ get_header(); ?>
 		$contactInfo = get_field('additional_contact_info');
 		$forWho = get_field('for_who');
 		$pageContent = get_field('description');
+		$email = get_field('email');
+		$phone = get_field('phone_numbers');
 
 		?>
 
@@ -27,7 +29,13 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					<?php the_content(); ?>
+					<?php echo $pageContent; ?>
+					<h2>For additional information contact</h2>
+					<?php echo $contactInfo; ?>
+					<a href="mailto:<?php echo antispambot($email); ?>">
+					  <?php echo antispambot($email); ?>
+					</a>
+					<?php echo $phone; ?>
 				</div><!-- .entry-content -->
 
 			</article><!-- #post-## -->
@@ -38,12 +46,32 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<div class="widget-area">
-		<?php if( $contactInfo != '' ) { ?>
-			<blockquote class="chair">
-				<?php echo $contactInfo[ $i ]['block_quote']; ?>
+	<div class="widget-area">
+		
+		<div class="current-btn">
+			<a href="<?php bloginfo('url'); ?>/current-assignments">
+				CURRENT SEARCH ASSIGNMENTS
+			</a>
+		</div><!-- current btn -->
+
+	   <div id="sticky" class="sticky">
+			<blockquote class="chair " >
+				
+				<?php if( $contactInfo != '' ) { 
+					echo $contactInfo; 
+				} 
+				if( $email != '' ) { ?>
+				<div class="email">
+					<a href="mailto:<?php echo antispambot($email); ?>">
+					  <?php echo antispambot($email); ?>
+					</a>
+				</div><!-- email -->
+				<?php } if( $contactInfo != '' ) { ?>
+					<div class="phone-numbers"><?php echo $phone; ?></div>
+				<?php } ?>
 			</blockquote>
-		<?php } ?>
+		</div>
+		
 	</div><!-- side area -->
 
 </div><!-- wrapper -->

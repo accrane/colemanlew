@@ -2,8 +2,13 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-.entry-content h1 {
-	font-size: 30px;
+.entry-content h1,
+h1.entry-title
+ {
+	font: {
+	 	family: $font__heading;
+	 	size: 40px;
+	}
 }
 
 .last-word {

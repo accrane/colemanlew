@@ -473,6 +473,11 @@ blockquote.chair {
 		size: 30px;
 		weight: 400;
 	}
+
+	.email, .email a, .phone-numbers {
+		color: #fff;
+		font-size: 25px;
+	}
 }
 section.current-search-assignments	{
 	padding: 50px 0 50px;
@@ -674,3 +679,83 @@ section.completed {
 
 	} // job title
 } // section
+
+.current-btn {
+	width: 100%;
+	margin-bottom: 20px;
+	font: {
+		family: $font__heading;
+		size: 17px;
+		weight: 700;
+	}
+
+	a {
+		width: 100%;
+		border: 1px solid $color-red;
+		padding: 20px 0;
+		text-align: center;
+		color: $color-red;
+		display: block;
+		text-decoration: none;
+		@include transition(.3s ease all);
+
+		&:hover {
+			background-color: $color-red;
+			color: #fff;
+		}
+	}
+}
+article.news-first-post {
+	@media screen and (min-width: $tabwidth) {
+		border-right: 1px solid #BBBDC0;
+		margin: 2%;
+		float: left;
+	}
+}
+article.news-last-post {
+	
+
+	@media screen and (min-width: $tabwidth) {
+		margin: 2%;
+		float: left;
+	}
+}
+article.news-post {
+	width: 100%;
+	position: relative;
+	font: {
+		size: 14px;
+		family: $font__main;
+		weight: 400;
+	}
+
+	@media screen and (min-width: $tabwidth) {
+		width: 29.3%;
+		padding: 0 3%;
+	}
+
+	h2 {
+		margin: 0 0 20px 0;
+		font: {
+			weight: 700;
+			size: 14px;
+			family: $font__main;
+		}
+		
+	}
+	a {
+		text-decoration: none;
+	    color: $color-dark-black;
+	    background-color: rgba(255, 255, 255, 0);
+	    padding: 10px 20px 10px 0;
+	    @include transition(all ease-in-out .3s);
+
+	    &:hover {
+	    	padding: 10px 40px 10px 0;
+	    }
+	}
+	.excerpt {
+		margin-bottom: 20px;
+	}
+
+}

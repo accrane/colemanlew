@@ -92,6 +92,19 @@ body.home header#masthead {
 		/*width: 1200px;*/
 	}
 }
+.content-area-post {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 65%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 70%;
+	}
+}
 
 .widget-area {
 	width: 100%;
@@ -104,6 +117,67 @@ body.home header#masthead {
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
+	}
+}
+.widget-area-post {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 25%;
+		float: right;
+		margin: 50px 0 0 0;
+		border-left: 1px solid #BBBDC0;
+		padding-left: 5%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 20%;
+	}
+
+	h3 {
+		margin: 0 0 20px 0;
+	}
+	li {
+		width: 100%;
+		position: relative;
+		list-style: none;
+		margin: 0 0 10px 0;
+		font: {
+			size: 14px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 14px;
+		}
+		.plus {
+			width: 20px;
+			position: absolute;
+			right: 10px;
+			top: 0;
+			@include transition(all .3s ease);
+			@media screen and (min-width: $tabwidth) {
+				width: 10px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				width: 20px;
+		}
+		}
+		&:hover {
+			.plus {
+				right: 0px;
+			}
+		}
+	}
+	li a {
+		width: auto;
+		display: block;
+		position: relative;
+		display: inline-block;
+		text-transform: uppercase;
+		color: $color-dark-black;
+		text-decoration: none;
 	}
 }
 
@@ -199,6 +273,7 @@ article {
 		width: auto;
 		position: relative;
 		display: inline-block;
+		text-transform: uppercase;
 	}
 	.plus {
 		width: 20px;
@@ -253,6 +328,13 @@ footer.site-footer {
 .icon--plus > path {
     
     fill: #fff;
+    stroke: rgba(255,255,255,0);
+    stroke-width: 0.5;
+    // stroke-linejoin: round;
+}
+.icon--plus-black > path {
+    
+    fill: $color-dark-black;
     stroke: rgba(255,255,255,0);
     stroke-width: 0.5;
     // stroke-linejoin: round;

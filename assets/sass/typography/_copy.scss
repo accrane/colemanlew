@@ -9,6 +9,9 @@ dfn, cite, em, i {
 blockquote {
 	margin: 0 1.5em;
 }
+blockquote.chair {
+	margin: 0;
+}
 
 address {
 	margin: 0 0 1.5em;
@@ -47,12 +50,12 @@ big {
 .coleman-lew-red {color: $color-red;}
 .entry-content {
 	 
-	 font: {
+	font: {
 	 	family: $font__main;
 	 	size: 17px;
-	 }
+	}
 
-	 ul {
+	ul {
 	    list-style: none;
 	    padding:0;
 	    margin:0 0 20px 20px;
@@ -69,5 +72,25 @@ big {
 	    font-family:"Arial Black";
 	    padding: 10px;
 	    margin-top: 5px;
+	}
+	ul ul li:before {
+	    content: "-";
+	    color: #000; 
+	    font-family:"Arial Black";
+	    padding: 10px;
+	    margin-top: 5px;
+	}
+
+	h2 {
+		font: {
+			family: $font__heading;
+			size: 24px;
+		}
+	}
+	h3 {
+		font: {
+			family: $font__heading;
+			size: 20px;
+		}
 	}
 }

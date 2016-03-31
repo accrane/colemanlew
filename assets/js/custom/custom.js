@@ -159,6 +159,7 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$('.js-blocks').matchHeight();
 	$('.js-paragraph').matchHeight();
+	$('.js-title').matchHeight();
 
 	/*
 	*
@@ -166,5 +167,13 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
+
+
+	/*
+	*
+	*	Sticky Contact
+	*
+	------------------------------------*/
+	$("#sticky").sticky({topSpacing:20});
 
 });// END #####################################    END

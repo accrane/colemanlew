@@ -36,3 +36,13 @@ img {
 }
 
 @import "tables";
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 15px;
+	position: relative;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}

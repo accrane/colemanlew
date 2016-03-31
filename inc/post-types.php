@@ -38,6 +38,38 @@ function js_custom_init()
   ); 
   register_post_type('position',$args); // name used in query
   
+
+
+     $labels = array(
+  'name' => _x('Professional', 'post type general name'),
+    'singular_name' => _x('Professional', 'post type singular name'),
+    'add_new' => _x('Add New', 'Professional'),
+    'add_new_item' => __('Add New Professional'),
+    'edit_item' => __('Edit Professional'),
+    'new_item' => __('New Professional'),
+    'view_item' => __('View Professional'),
+    'search_items' => __('Search Professional'),
+    'not_found' =>  __('No Professional found'),
+    'not_found_in_trash' => __('No Professional found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Professionals'
+  );
+  $args = array(
+  'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+    'menu_position' => 20,
+    'supports' => array('title','editor','custom-fields','thumbnail', 'excerpt'),
+  
+  ); 
+  register_post_type('professional',$args); // name used in query
   // Add more between here
   
   // and here
