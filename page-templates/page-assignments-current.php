@@ -37,7 +37,7 @@ get_header(); ?>
 
 		<div class="jobsquare job-acitve">
 			<a class="job-active" href="<?php the_permalink(); ?>">
-				<h3><?php the_title(); ?></h3>
+				<h3 class="current"><?php the_title(); ?></h3>
 				<div class="focus-block-plus">
 						<svg class="icon  icon--plus" viewBox="0 0 5 5" >
 					    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />

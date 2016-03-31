@@ -148,7 +148,7 @@ wp_reset_postdata();
 	setup_postdata( $post ); 
 
 	$fImage = get_field('featured_image');
-	$pContent = get_field('page_content');
+	$pContent = get_field('homepage_content');
 	$size = 'full';
 
 	if( $fImage ) {

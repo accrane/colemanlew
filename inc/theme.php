@@ -56,11 +56,11 @@ if ( ! current_user_can( 'manage_options' ) ) {
 /*-------------------------------------
   Custom WYSIWYG Styles
 ---------------------------------------*/
-function acc_custom_styles($buttons) {
-  array_unshift($buttons, 'styleselect');
-  return $buttons;
-}
-add_filter('mce_buttons_2', 'acc_custom_styles');
+// function acc_custom_styles($buttons) {
+//   array_unshift($buttons, 'styleselect');
+//   return $buttons;
+// }
+// add_filter('mce_buttons_2', 'acc_custom_styles');
 /*
 * Callback function to filter the MCE settings
 */
@@ -75,8 +75,22 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'title' => 'Coleman Lew Red',  
       'inline' => 'span',  
       'classes' => 'coleman-lew-red',
-      'wrapper' => true,
+      //'wrapper' => true,
+      'styles' => array(
+            'color'         => '#ff0000', // or hex value #ff0000
+            //'fontWeight'    => 'bold',
+            //'textTransform' => 'uppercase'
+        )
       
+    ),
+    array(
+        'title' => 'Header 2',
+        'format' => 'h2',
+        //'icon' => 'bold'
+    ),
+    array(
+        'title' => 'Header 3',
+        'format' => 'h3'
     )
   );  
   // Insert the array, JSON ENCODED, into 'style_formats'
