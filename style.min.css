@@ -1094,6 +1094,9 @@ section.professionals .professional-hover h2{margin:40% 0 0 0;font-size:26px;fon
 @media screen and (min-width:600px){.pop-image{width:45%;position:absolute;top:0;right:0}
 }.pop-image img{width:100%}
 .pop-content{color:#fff;width:40%;float:left;position:relative;z-index:10;margin:10%}
+section.experience{width:100%;overflow:hidden;position:relative;text-align:center}
+section.experience .bg-image{width:100%;position:absolute;top:0;z-index:10}
+section.experience .bg-image img{width:100%;opacity:.2;position:relative;z-index:9}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

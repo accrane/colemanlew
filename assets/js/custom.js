@@ -32,9 +32,9 @@ jQuery(document).ready(function ($) {
 	*	Flexslider
 	*
 	------------------------------------*/
-	// $('.flexslider').flexslider({
-	// 	animation: "slide",
-	// }); // end register 
+	$('.flexslider-single').flexslider({
+		animation: "slide",
+	}); // end register 
 	(function() {
 	 
 	  // store the slider in a local variable

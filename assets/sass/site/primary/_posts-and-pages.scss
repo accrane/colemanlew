@@ -899,3 +899,28 @@ section.professionals {
 	z-index: 10;
 	margin: 10%;
 }
+section.experience {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+	.exp-content {
+		
+
+	}
+	.bg-image {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+
+		img {
+			width: 100%;
+			opacity: 0.2;
+			position: relative;
+			z-index: 9;
+		}
+	}
+	
+}
