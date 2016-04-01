@@ -144,7 +144,7 @@ function build_taxonomies() {
    register_taxonomy( 'story_type', 'story',
      array( 
       'hierarchical' => true, // true = acts like categories false = acts like tags
-      'label' => 'Focus Area', 
+      'label' => 'Story Type', 
       'query_var' => true, 
       'rewrite' => true ,
       'show_admin_column' => true,
