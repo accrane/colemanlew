@@ -140,6 +140,18 @@ function build_taxonomies() {
       'rewrite' => array( 'slug' => 'focus-area' ),
       '_builtin' => true
     ) );
+
+   register_taxonomy( 'story_type', 'story',
+     array( 
+      'hierarchical' => true, // true = acts like categories false = acts like tags
+      'label' => 'Focus Area', 
+      'query_var' => true, 
+      'rewrite' => true ,
+      'show_admin_column' => true,
+      'public' => true,
+      'rewrite' => array( 'slug' => 'story-type' ),
+      '_builtin' => true
+    ) );
    
   
 } // End build taxonomies
