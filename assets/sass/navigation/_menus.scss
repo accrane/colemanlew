@@ -93,15 +93,13 @@
 			padding: 8px 12px ;
 		}
 
-		&:hover {
+		&:hover, .active {
 			background-color: rgba(255,255,255,.3);
+			color: $color-red;
 		}
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	a.active {
+		color: $color-red;
 	}
 }
 body.home .main-navigation {

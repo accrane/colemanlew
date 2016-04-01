@@ -713,7 +713,8 @@ a:hover,a:active{outline:0}
 @media screen and (min-width:600px){.main-navigation a{padding:8px 10px}
 }@media screen and (min-width:900px){.main-navigation a{padding:8px 10px}
 }@media screen and (min-width:1200px){.main-navigation a{padding:8px 12px}
-}.main-navigation a:hover{background-color:rgba(255,255,255,0.3)}
+}.main-navigation a:hover,.main-navigation a .active{background-color:rgba(255,255,255,0.3);color:#d61e36}
+.main-navigation a.active{color:#d61e36}
 body.home .main-navigation a{color:#fff}
 .menu-toggle,.main-navigation.toggled ul{display:block}
 @media screen and (min-width:37.5em){.menu-toggle{display:none}
