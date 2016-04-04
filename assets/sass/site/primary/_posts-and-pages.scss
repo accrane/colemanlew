@@ -35,7 +35,10 @@
 	z-index: 1;
 	line-height: 0;
 
-	img {width: 100%;}
+	img {
+		width: 100%;
+		margin-top: -100px;
+	}
 }
 .hero-headline-box {
 	width: 100%;
@@ -255,6 +258,7 @@ section.about {
 	}
 }
 section.news-resources {
+	overflow: hidden;
 	background-color: $color-light-grey;
 	color: #fff;
 	
