@@ -983,8 +983,8 @@ html[xmlns] .flexslider .slides,html[xmlns] .flexslider-story .slides{display:bl
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-links{clear:both;margin:0 0 1.5em}
-.hero{width:100%;position:relative;margin:-200px 0 0 0;z-index:1;line-height:0}
-.hero img{width:100%;margin-top:-100px}
+.hero{width:100%;position:relative;margin:-200px 0 0 0;z-index:1;float:left;line-height:0}
+.hero img{width:100%;margin-top:-100px;float:left}
 .hero-headline-box{width:100%;position:absolute;top:45%;line-height:1.2}
 .hero-headline,.hero-headline-sub-1,.hero-headline-sub-2{width:100%;text-align:center;color:#fff;font-weight:300}
 .hero-headline{font-family:"Ubuntu",sans-serif;font-size:24px;margin:0 0 10px 0}
