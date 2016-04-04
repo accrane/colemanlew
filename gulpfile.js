@@ -192,8 +192,9 @@ gulp.task( 'vendorsJs', function() {
 	//gulp.src( jsVendorSRC )
 	gulp.src( [
 		'./assets/js/vendors/nicescroll.min.js',
-		'./assets/js/vendors/flexslider.js',
 		'./assets/js/vendors/blocks.js',
+		'./assets/js/vendors/flexslider.js',
+		
 		'./assets/js/vendors/colorbox.js',
 		'./assets/js/vendors/isotope.js',
 		'./assets/js/vendors/images-loaded.js',

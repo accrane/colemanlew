@@ -83,7 +83,7 @@ wp_reset_postdata();
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
 		'post_type'=>'position',
-		'posts_per_page' => 10,
+		'posts_per_page' => -1,
 		'paged' => $paged,
 		'tax_query' => array(
 			array(

@@ -29,7 +29,6 @@ div {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
-	overflow: hidden;
 	position: relative;
 	
 	@media screen and (min-width: $tabwidth) {
@@ -66,18 +65,33 @@ div {
 		
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 60%;
+		width: 70%;
 		padding: 20px 10%;
 	}
 }
 header#masthead {
 	border-bottom: 1px solid #E5E5E4;
+	overflow: hidden;
+
+	@media screen and (min-width: $tabwidth) {
+		overflow: visible;
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 118px;
+	}
 }
 body.home header#masthead {
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
 	border-bottom: 0px solid #333;
+
+	@media screen and (min-width: $tabwidth) {
+		overflow: visible;
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 118px;
+	}
 }
 .content-area {
 	width: 100%;
@@ -289,6 +303,8 @@ footer.site-footer {
 	font-size: 12px;
 	width: 100%;
 	clear: both;
+	padding-bottom: 20px;
+	overflow: hidden;
 	a {
 		text-decoration: none;
 		color: #fff;

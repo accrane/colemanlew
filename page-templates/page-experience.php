@@ -13,10 +13,13 @@ $size = 'full';
 <section class="experience">
 	<div class="exp-content">
 		<div class="small-wrapper">
+			
 			<header class="entry-header">
 				<h1 class="entry-title js-last-word"><?php the_title(); ?></h1>
 			</header><!-- .entry-header -->
+
 			<div class="entry-content"><?php echo $content; ?></div>
+
 	</div><!-- small wrapper -->
 	</div><!-- exp content -->
 	
@@ -40,7 +43,7 @@ endwhile; // End of the loop.
 ));
 	if ($wp_query->have_posts()) : ?>
 
-<div class="flexslider-single">
+<div class="flexslider-story">
 	<header class="stories">
 		Success Stories
 	</header>
@@ -55,30 +58,47 @@ endwhile; // End of the loop.
             <li> 
               
 				<div class="slider-story">
-					<div class="slider-story-left">
+					<div class="slider-story-left col js-blocks-no">
 						<header class="story-type">
+							<div class="story-wrap">
 							<?php 
 
+							
 							$terms = get_the_terms( get_the_ID(), 'story_type' );
                          
 							if ( $terms && ! is_wp_error( $terms ) ) : 
-
-								foreach ( $terms as $term ) {
-									$term->name;
-								}
-							endif;
-							?>
-
+							 
+							    //$storyTypes = array();
+							 
+							    foreach ( $terms as $term ) {
+							        //$storyTypes[] = $term->name;
+							        //print_r($storyTypes) ;
+							        $name = $term->name;
+							    }
+							                         
+							    //$storyType = join( "", $storyTypes );
+							    ?>
+ 								<div class="js-first-word"><?php echo $name; ?></div>
+    
+        
+  
+								<?php endif; ?>
+						
+							</div><!-- -->
 						</header>
-						<?php echo $quote; ?>
-					</div>
-					<div class="slider-story-right">
+						<div class="story-wrap-quote"><?php echo $quote; ?></div><!-- story-wrap -->
+					</div><!-- story left -->
+					<div class="slider-story-right col js-blocks-no">
 						<header class="story-title">
+							<div class="story-wrap">
 							<?php the_title(); ?>
+							</div>
 						</header>
-						<?php echo $content; ?>
-					</div>
-				</div>
+						<div class="story-wrap">
+							<?php echo $content; ?>
+						</div><!-- story-wrap -->
+					</div><!-- s right -->
+				</div><!-- story -->
                 
             </li>
             
@@ -86,6 +106,15 @@ endwhile; // End of the loop.
       	 </ul><!-- slides -->
 </div><!-- .flexslider -->
 
+<button class="see-below js-filter-button">
+	See examples of positions we have filled below<br>
+	(set to show 10? Or should we setup a picker on this page?)
+	<div class="arrow-toggle">
+		<svg viewbox="0 0 100 100">
+		    <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "transform="translate(0,90) rotate(270) ">
+		</svg>
+	</div><!-- arrow toggle -->
+</button>
 
 <?php endif; ?>
 </section>
@@ -93,17 +122,56 @@ endwhile; // End of the loop.
 	
 	
 
-<div class="content-wrapper">
-	<div id="primary" class="content-area-full">
-		<main id="main" class="site-main" role="main">
+<section class="completed">
+	
 
-			
+	<?php
+	$wp_query = new WP_Query();
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
-<?php
-get_sidebar(); ?>
-</div><!-- wrapper -->
+		$wp_query->query(array(
+			'post_type'=>'position',
+			'posts_per_page' => 10,
+			//'paged' => $paged,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'status', // taxonomy
+					'field' => 'slug',
+					'terms' => array( 'completed' ) // the terms 
+				)
+			)
+		));
+	
+	
+	if ($wp_query->have_posts()) : ?>
+	<div class="flexslider carousel">
+		<ul class="slides">
+			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+
+	//$forWho = get_field('for_who');
+
+	?>
+
+		<li>
+				<div class="jobsquare-slider ">
+					<a class="" href="<?php the_permalink(); ?>">
+						<h3><?php the_title(); ?></h3>
+						<div class="focus-block-plus">
+			 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
+							    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
+							</svg>
+						</div><!-- plus -->
+					</a>
+				</div><!-- jobsquare -->
+			</li>
+
+			<?php endwhile; ?>
+		</ul>
+	</div><!-- flexslider -->
+<?php endif; ?>
+</section>	
+
+
 <?php
 get_footer();

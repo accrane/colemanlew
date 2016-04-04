@@ -18,6 +18,9 @@ jQuery(document).ready(function ($) {
         }
 	});
 
+	
+	
+
 	/*
 	*
 	*	Assignment Links Toggle the Class
@@ -32,9 +35,21 @@ jQuery(document).ready(function ($) {
 	*	Flexslider
 	*
 	------------------------------------*/
-	$('.flexslider-single').flexslider({
-		animation: "slide",
-	}); // end register 
+	(function() {
+		$('.flexslider-story').flexslider({
+			animation: "slide",
+			smoothHeight: true
+			// start: function() {
+	  //           var height = $(".flexslider-story ul.slides").first().height();
+	  //           console.log(height);
+	  //       }
+			
+		}); // end register 
+	}());
+
+
+
+
 	(function() {
 	 
 	  // store the slider in a local variable
@@ -47,9 +62,9 @@ jQuery(document).ready(function ($) {
 	           (window.innerWidth < 900) ? 2 : 3;
 	  }
 	 
-	  $(function() {
-	    SyntaxHighlighter.all();
-	  });
+	  // $(function() {
+	  //   SyntaxHighlighter.all();
+	  // });
 	 
 	  $window.load(function() {
 	    $('.flexslider').flexslider({
@@ -103,6 +118,21 @@ jQuery(document).ready(function ($) {
 
         heading.html([last_word, '<br> ', first_part].join(''));
     });
+    /*
+	*
+	*	Make last word in H1 red
+	*
+	------------------------------------*/
+	$('.js-two-word').each(function(index, element) {
+        var heading = $(element);
+        var word_array, last_word, first_part;
+
+        word_array = heading.html().split(/\s+/); // split on spaces
+        last_word = word_array.pop();             // pop the last word
+        first_part = word_array.join(' ');        // rejoin the first words together
+
+        heading.html([first_part, ' <br>', last_word, '</span>'].join(''));
+    });
 
 	/*
 	*
@@ -143,14 +173,7 @@ jQuery(document).ready(function ($) {
 	    return false;
 	});
 
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	
 	
 	
 	/*
@@ -177,4 +200,17 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$("#sticky").sticky({topSpacing:20});
 
+});// END #####################################    END
+
+jQuery(window).load(function ($) {
+	/*
+	*
+	*	Nice Page Scroll
+
+	!!!!!!!!! IF you uncomment, add it to the gulp file
+	*
+	------------------------------------*/
+	// (function() {
+	// 	$("html").niceScroll();
+	// }());
 });// END #####################################    END

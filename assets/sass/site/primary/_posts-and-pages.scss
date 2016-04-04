@@ -901,12 +901,16 @@ section.professionals {
 }
 section.experience {
 	width: 100%;
+	z-index: 20;
 	overflow: hidden;
 	position: relative;
 	text-align: center;
 
 	.exp-content {
-		
+		width: 100%;
+		z-index: 20;
+		overflow: hidden;
+		position: relative;
 
 	}
 	.bg-image {
@@ -923,4 +927,136 @@ section.experience {
 		}
 	}
 	
+}
+header.stories {
+	background-color: #F1F1F2;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 10px 0 10px 20px;
+	font: {
+		size: $font__heading;
+		size: 24px;
+		weight: 300;
+	}
+}
+.flexslider-story {
+	width: 70%;
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 40px auto;
+	z-index: 12;
+	background-color: #fff;
+}
+.slider-story {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	.story-wrap {
+		padding: 20px 20px 0 20px;
+	}
+	.story-wrap-quote {
+		padding: 20px 40% 0 20px;
+	}
+	.col {
+		//display: table-cell;
+	}
+	.slider-story-left {
+		width: 33%;
+		float: left;
+		background-color: $color-red;
+		color: #fff;
+		overflow: hidden;
+		text-align: left;
+		line-height: 1.4;
+		font: {
+			family: $font__main;
+			size: 20px;
+			weight: 300;
+		}
+
+		header.story-type {
+			// margin-bottom: 15px;
+
+			font: {
+				family: $font__heading;
+				size: 24px;
+				weight: 700;
+			}
+		}
+	}
+	.slider-story-right {
+		width: 66%;
+		float:  right;
+		overflow: hidden;
+		text-align: left;
+
+
+		font: {
+			family: $font__main;
+			size: 14px;
+			weight: 400;
+		}
+		p {
+			display: block;
+			overflow: hidden;
+		}
+		header.story-title {
+			color: $color-red;
+			// margin-bottom: 15px;
+			font: {
+				family: $font__heading;
+				size: 24px;
+				weight: 700;
+			}
+		}
+	}
+}
+button.see-below{
+	width: auto;
+	position: relative;
+	padding: 10px 20px;
+	display: inline-block;
+	background-color: rgba(0,0,0,0);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+	box-shadow: none;
+	border: 0px;
+	color: #000;
+	font: {
+		family: $font__heading;
+		weight: 700;
+		size: 24px;
+	}
+
+	.arrow-toggle {
+		width: 20px;
+		position: absolute;
+		top: 10px;
+		right: -10px;
+	}
+	.arrow {
+		fill: #000;
+	}
+}
+nav.sub-nav {
+	width: 100%;
+	border-bottom: 1px solid #E5E5E4;
+	text-align: center;
+	li.first-in-nav {
+		padding: 10px 10px;
+	}
+	li {
+		display: inline-block;
+		font-size: 14px;
+		text-transform: lowercase;
+	}
+	a {
+		color: #A9A9A9;
+		padding: 10px 10px;
+		text-decoration: none;
+		@include transition(all ease .3s);
+		&:hover {
+			color: $color-red;
+		}
+	}
 }

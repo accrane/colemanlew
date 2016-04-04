@@ -150,3 +150,24 @@ function get_excerpt($count){
   $excerpt = wp_trim_words($excerpt, $count, $words);
   return $excerpt;
 }
+
+/**
+ * Remove the 'description' column from the table in 'edit-tags.php'
+ * but only for the 'post_tag' taxonomy
+ */
+add_filter('manage_edit-focus_area_columns', function ( $columns ) 
+{
+    if( isset( $columns['description'] ) )
+        unset( $columns['description'] );   
+
+    return $columns;
+} );
+
+/**
+ * Hide the term description in the post_tag edit form
+ */
+add_action( "focus_area_edit_form", function( $tag, $taxonomy )
+{ 
+    ?><style>.term-description-wrap{display:none;}</style><?php
+}, 10, 2 );
+

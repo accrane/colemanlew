@@ -7,11 +7,22 @@
  * @package ACStarter
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+// 	return;
+// }
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php //dynamic_sidebar( 'sidebar-1' ); ?>
+
+	<?php 
+
+	$blockquotes = get_field('quote');
+
+	if( $blockquotes != '' ) { ?>
+			<blockquote class="chair">
+				<?php echo $blockquotes; ?>
+			</blockquote>
+		<?php } ?>
+
 </aside><!-- #secondary -->

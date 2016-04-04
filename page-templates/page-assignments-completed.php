@@ -25,7 +25,7 @@ get_header(); ?>
 			<svg viewbox="0 0 100 100">
 			    <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "transform="translate(0,90) rotate(270) ">
 			</svg>
-	</div><!-- arrow toggle -->
+		</div><!-- arrow toggle -->
 	</button>
 
 </nav>
