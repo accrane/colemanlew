@@ -44,7 +44,7 @@
 		width: 100%;
 		float: left;
 		@media screen and (min-width: $midwidth) {
-			margin-top: -100px;
+			
 		}
 	}
 }
@@ -940,16 +940,16 @@ section.professionals {
 	margin-top: 50px;
 
 	@media screen and (min-width: $tabwidth) {
-		margin-top: 50px;
+		margin-top: 0px;
 	}
 	@media screen and (min-width: $midwidth) {
-		margin-top: 130px;
+		margin-top: 160px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		margin-top: 118px;
 	}
 }
-.pop-fade {
+.pop-fade-wrap {
 	width: 100%;
 	position: relative;
 	z-index: 8;
@@ -959,10 +959,24 @@ section.professionals {
 		position: absolute;
 		left: 0;
 		top: 0;
+		
+	}
+}
+.pop-fade {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 8;
+	@media screen and (min-width: $tabwidth) {
+		width: 80%;
+		//height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+33,000000+100&0.65+46,0+100 */
-		background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 33%, rgba(0,0,0,0.65) 46%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right,  rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: -moz-linear-gradient(left,  rgba(0,0,0,1) 33%, rgba(0,0,0,0.65) 46%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(0,0,0,1) 33%,rgba(0,0,0,0.65) 46%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 
 	}
@@ -973,13 +987,15 @@ section.professionals {
 	position: relative;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 45%;
+		// width: 45%;
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: -20%;
 	}
 	img {
 		width: 100%;
+		position: relative;
+		z-index: 7;
 	}
 }
 .pop-content {
@@ -1165,3 +1181,55 @@ nav.sub-nav {
 .pusher {
 	margin-bottom: 40px;
 }
+.tabs-border {
+	border: 1px solid $color-light-grey;
+	padding: 20px;
+	margin-top: -1px;
+	text-align: left;
+}
+.tabs {
+	text-align: center;
+	ul.tabs {
+		margin: 0 !important;
+		padding: 0;
+	}
+	li {
+		list-style:none;
+		display:inline;
+		width: 100%;
+		font: {
+			family: $font__heading;
+			size: 12px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 12px;
+			width: auto;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 14px;
+		}
+	}
+	a {
+		padding:10px 10px;
+		display:inline-block;
+		background: $color-light-grey;
+		color:#fff;
+		text-decoration:none;
+		border-top: 1px solid $color-light-grey;
+		border-right: 1px solid $color-light-grey;
+		border-left: 1px solid $color-light-grey;
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			padding:10px 5px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding:10px 10px;
+			width: auto;
+		}
+	}
+	a.active {
+		background:#fff;
+		color:#000;
+	}
+}
+

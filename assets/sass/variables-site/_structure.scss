@@ -53,6 +53,10 @@ div {
 	padding: 20px;
 	overflow: hidden;
 	position: relative;
+
+	h1 {
+		text-align: center;
+	}
 	
 	@media screen and (min-width: $tabwidth) {
 		

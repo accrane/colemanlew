@@ -67,7 +67,8 @@ get_header(); ?>
 
     <div style="display: none;">
     	<div class="profess-popup people" id="<?php echo $sanitized; ?>">
-    		<div class="pop-fade">
+    		<div class="pop-fade-wrap">
+    			<div class="pop-fade"></div>
     			<div class="pop-content">
     				<h2><?php the_title(); ?></h2>
     				<?php echo $bio; ?>
