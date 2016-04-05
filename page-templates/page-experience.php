@@ -39,7 +39,7 @@ endwhile; // End of the loop.
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
 	'post_type'=>'story',
-	'posts_per_page' => -1
+	'posts_per_page' => 10
 ));
 	if ($wp_query->have_posts()) : ?>
 
@@ -94,7 +94,7 @@ endwhile; // End of the loop.
 							<?php the_title(); ?>
 							</div>
 						</header>
-						<div class="story-wrap">
+						<div class="story-wrap-cont">
 							<?php echo $content; ?>
 						</div><!-- story-wrap -->
 					</div><!-- s right -->
@@ -108,7 +108,7 @@ endwhile; // End of the loop.
 
 <button class="see-below js-filter-button">
 	See examples of positions we have filled below<br>
-	(set to show 10? Or should we setup a picker on this page?)
+	
 	<div class="arrow-toggle">
 		<svg viewbox="0 0 100 100">
 		    <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "transform="translate(0,90) rotate(270) ">

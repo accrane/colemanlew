@@ -48,6 +48,19 @@
 		}
 	}
 }
+.hero-grad {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 400px;
+	z-index: 10;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
 .hero-headline-box {
 	width: 100%;
 	position: absolute;
@@ -633,7 +646,7 @@ section.pad {
 	padding-bottom: 0px;
 }
 section.completed {
-
+	margin-bottom: 30px;
 	.jobsquare {
 		position: relative;
 		width: 100%;
@@ -1062,6 +1075,9 @@ header.stories {
 	.story-wrap {
 		padding: 20px 20px 0 20px;
 	}
+	.story-wrap-cont {
+		padding: 0px 20px 0 20px;
+	}
 	.story-wrap-quote {
 		padding: 20px 40% 0 20px;
 	}
@@ -1078,7 +1094,7 @@ header.stories {
 		line-height: 1.4;
 		font: {
 			family: $font__main;
-			size: 20px;
+			size: 24px;
 			weight: 300;
 		}
 
@@ -1122,6 +1138,7 @@ header.stories {
 button.see-below{
 	width: auto;
 	position: relative;
+	margin-bottom: 30px;
 	padding: 10px 20px;
 	display: inline-block;
 	background-color: rgba(0,0,0,0);

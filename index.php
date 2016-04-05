@@ -33,6 +33,7 @@ get_header(); ?>
 
 	if( $image ) {
 		echo '<div class="hero">';
+		echo '<div class="hero-grad"></div>';
 		echo wp_get_attachment_image( $image, $size );
 
 			if( $headline ) {
