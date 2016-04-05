@@ -31,22 +31,32 @@
 .hero {
 	width: 100%;
 	position: relative;
-	margin: -200px 0 0 0;
+	margin: 0 0 0 0;
 	z-index: 1;
 	float: left;
 	line-height: 0;
 
+	@media screen and (min-width: $midwidth) {
+		margin: -200px 0 0 0;
+	}
+
 	img {
 		width: 100%;
-		margin-top: -100px;
 		float: left;
+		@media screen and (min-width: $midwidth) {
+			margin-top: -100px;
+		}
 	}
 }
 .hero-headline-box {
 	width: 100%;
 	position: absolute;
-	top: 45%;
+	top: 10%;
 	line-height: 1.2;
+
+	@media screen and (min-width: $tabwidth) {
+		top: 45%;
+	}	
 }
 .hero-headline, .hero-headline-sub-1, .hero-headline-sub-2
 {
@@ -332,8 +342,100 @@ section.news-resources {
 	}
 
 }
-.focus-block {
+.focus-block-large {
 	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		width: 25%;
+		float: left;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	.focus-block-info {
+		width: 100%;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		color: #fff;
+		text-align: center;
+
+		h2 {
+			width: 90%;
+			margin: 10% auto 0 auto;
+			line-height: 1.2;
+			text-shadow: 0px 1px 3px rgba(30, 30, 30, 1);
+			font: {
+				family: $font__heading;
+				style: 700;
+				size: 20px;
+			}
+
+			@media screen and (min-width: $tabwidth) {
+				font-size: 22px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 33px;
+				margin: 30% auto 0 auto;
+			}
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	} // focus block info
+}
+.focus-block-small {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		width: 14.2857143%;
+		float: left;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+	.focus-block-info {
+		width: 100%;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		color: #fff;
+		text-align: center;
+
+		h2 {
+			width: 90%;
+			margin: 10% auto 0 auto;
+			line-height: 1.2;
+			text-shadow: 0px 1px 3px rgba(30, 30, 30, 1);
+			font: {
+				family: $font__heading;
+				style: 700;
+				size: 20px;
+			}
+
+			@media screen and (min-width: $tabwidth) {
+				font-size: 14px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 20px;
+				margin: 30% auto 0 auto;
+			}
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	} // focus block info
+}
+.focus-block {
+	
 	position: relative;
 	margin: 0;
 	overflow: hidden;
@@ -362,13 +464,7 @@ section.news-resources {
 		}
 	}
 
-	@media screen and (min-width: $tabwidth) {
-		width: 25%;
-		float: left;
-	}
-	@media screen and (min-width: $deskwidth) {
-		
-	}
+	
 }
 .focus-block-pad {padding: 10%;}
 .focus-block-first-info {
@@ -410,42 +506,7 @@ section.news-resources {
 		}
 	}
 }
-.focus-block-info {
-	width: 100%;
-	position: absolute;
-	height: 100%;
-	top: 0;
-	left: 0;
-	color: #fff;
-	text-align: center;
 
-	h2 {
-		width: 90%;
-		margin: 10% auto 0 auto;
-		line-height: 1.2;
-		text-shadow: 0px 1px 3px rgba(30, 30, 30, 1);
-		font: {
-			family: $font__heading;
-			style: 700;
-			size: 20px;
-		}
-
-		@media screen and (min-width: $tabwidth) {
-			font-size: 22px;
-		}
-		@media screen and (min-width: $deskwidth) {
-			font-size: 33px;
-			margin: 30% auto 0 auto;
-		}
-	}
-
-	@media screen and (min-width: $tabwidth) {
-		
-	}
-	@media screen and (min-width: $deskwidth) {
-		
-	}
-}
 .focus-block-plus {
 	width: 30px;
 	margin: 10px auto;
@@ -662,6 +723,7 @@ section.completed {
 			display: block;
 			width: 90%;
 			margin: 20% auto 0 auto;
+			line-height:1.2;
 			
 			font: {
 				font-family: $font__heading;
@@ -669,10 +731,16 @@ section.completed {
 				weight: 400;
 			} // font
 			@media screen and (min-width: $tabwidth) {
-				font-size: 14px;
+				font-size: 12px;
+				margin: 5% auto 0 auto;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 16px;
+				margin: 5% auto 0 auto;
 			}
 			@media screen and (min-width: $deskwidth) {
 				font-size: 21px;
+				margin: 20% auto 0 auto;
 			}
 		} // h3
 
@@ -681,6 +749,23 @@ section.completed {
 			width: 90%;
 			text-align: left;
 			margin: 10px auto 0 auto;
+			font: {
+				family: $font__main;
+				weight: 400;
+				size: 14px;
+			}
+			@media screen and (min-width: $tabwidth) {
+				font-size: 12px;
+				line-height: 1;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 12px;
+				line-height: 1.1;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 14px;
+				line-height: 1.2;
+			}
 		}
 
 	} // job title
@@ -1065,4 +1150,18 @@ nav.sub-nav {
 			color: $color-red;
 		}
 	}
+}
+.tax-hero {
+	width: 100%;
+	position: relative;
+
+	img {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		opacity: .2;
+	}
+}
+.pusher {
+	margin-bottom: 40px;
 }

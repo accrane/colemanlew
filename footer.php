@@ -10,6 +10,7 @@
  */
 
 ?>
+<div class="center"><?php get_template_part('template-parts/social-footer'); ?></div>
 
 	</div><!-- #content -->
 
@@ -38,6 +39,8 @@
 				echo '</div><!-- footer right -->';
 				 
 				 ?>
+
+
 			</div><!-- .site-info -->
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->

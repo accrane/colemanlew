@@ -65,7 +65,7 @@ get_header(); ?>
 		<section class="focus-areas">
 
 			<!-- Starter Block -->
-			<div class="focus-block">
+			<div class="focus-block  focus-block-large">
 				<div class="focus-block-first-info">
 					<h3 class="js-last-word">Our Focus Areas</h3>
 					<p>Let us help you find <br> the <b>right person</b> for <br>the <b>right role</b>.</p>
@@ -90,7 +90,7 @@ get_header(); ?>
 			// Loop through categories and randomly assign the image gallery to each category.
 			foreach($categories as $category) : 
 				
-				echo '<div class="focus-block">';
+				echo '<div class="focus-block  focus-block-large">';
 				echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
 					// pop an image off;
 					$element = array_pop($images);

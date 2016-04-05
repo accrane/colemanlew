@@ -1,84 +1,101 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package ACStarter
- */
-
-get_header(); ?>
-<div class="content-wrapper">
-<?php
-/**
-   Taxonomy template
+   Taxonomy template for Focus Areas
  
-	To create different taxonomy templates, copy
-	this file and create a new...
-	
-	Ex: taxonomy-my_custom_tax.php
- 	
+		
 */
-get_header(); ?>
- 
-<?php 
+
+get_header();
+
 // get some info about the term queried
 $queried_object = get_queried_object(); 
 $taxonomy = $queried_object->taxonomy;
 $term_id = $queried_object->term_id; 
+$slug = $queried_object->slug; 
+$name = $queried_object->name; 
 
+// Custom Fields
 $blockquote = get_field('block_quote', $taxonomy . '_' . $term_id);
 $desc = get_field('description', $taxonomy . '_' . $term_id);
+
+// Get my gallery from theme options
+$images = get_field('focus_area_photos', 'option');
+// Radomize them
+shuffle($images);
+// pop an image off one time to show the hero.
+// We'll also use that image below to match the page to it's image.
+$firstElement = array_pop($images);
+// echo '<pre>';
+// print_r($firstElement);
+// echo '</pre>';
+
+// Get the Terms for Focus Areas but use different Args 
+// from the get_terms below where we exclude the current term.
+$navArgs=array(
+  'orderby' => 'name',
+  'order' => 'ASC',
+  'hide_empty' => false
+);
+$navCategories = get_terms( 'focus_area', $navArgs );
 ?>
- 
 
- 
-<div class="content-wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<nav class="sub-nav">
 
+	<li class="first-in-nav">focus areas</li>
 
-			<header class="entry-header">
-				<h1 class="entry-title js-last-word"><?php echo get_queried_object()->name; ?></h1>
-			</header><!-- .entry-header -->
+	<?php foreach($navCategories as $nav) : 
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		echo '<li>';
+			echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $nav->slug . '">';
+				echo $nav->name;
+			echo '</a>';
+		echo '</li>';
+	endforeach;
+	?>
+</nav>	
+
+<div class="tax-hero">
+	
+	<?php echo '<img src="'.$firstElement['sizes']['large-hero'] .'" alt="'.$firstElement['alt'].'" />'; ?>
+
+	<div class="content-wrapper">
+
+		<div id="primary" class="content-area pusher">
+			<main id="main" class="site-main" role="main">
+
+				<header class="entry-header">
+					<h1 class="entry-title js-last-word"><?php echo get_queried_object()->name; ?></h1>
+				</header><!-- .entry-header -->
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="entry-content">
+						<?php echo $desc; ?>
+					</div><!-- .entry-content -->
+				</article><!-- #post-## -->
 				
-
-				<div class="entry-content">
-					<?php echo $desc; ?>
-				</div><!-- .entry-content -->
-
-				
-			</article><!-- #post-## -->
-			
-
-			
-
-		</div>
-	</div><!-- content area -->
+			</main>
+		</div><!-- content area -->
 
 
-	<aside id="secondary" class="widget-area" role="complementary">
-		<?php //dynamic_sidebar( 'sidebar-1' ); ?>
-
-		<?php 
-
-		if( $blockquote != '' ) { ?>
-				<blockquote class="chair">
-					<?php echo $blockquote; ?>
-				</blockquote>
-			<?php } ?>
-
-	</aside><!-- #secondary -->
+		<aside id="secondary" class="widget-area pusher" role="complementary">
+			<?php 
+			// get blockquote
+			if( $blockquote != '' ) { ?>
+					<blockquote class="chair">
+						<?php echo $blockquote; ?>
+					</blockquote>
+				<?php } ?>
+		</aside><!-- #secondary -->
 
 
-</div><!-- wrapper -->
+	</div><!-- content-wrapper -->
+
+</div><!-- tax hero -->
+
+
+
+
+
 <!-- 
 
 			Focus Areas
@@ -86,29 +103,52 @@ $desc = get_field('description', $taxonomy . '_' . $term_id);
 ################################################-->
 
 <section class="focus-areas">
-
-	
 	<?php 
+	/*
 
-	// Get my gallery from theme options
-	$images = get_field('focus_area_photos', 'option');
 
-	// Radomize them
-	shuffle($images);
+			Run the Current Term First
 
-	// Get the Terms for Focus Areas
+	*/
+	echo '<div class="focus-block focus-block-small">';
+		echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $slug . '">';
+			
+			// Repeat the Hero of the page here first.
+			echo '<img src="'.$firstElement['sizes']['large-square'] .'" alt="'.$firstElement['alt'].'" />';
+
+				// div info contents
+				echo '<div class="focus-block-info">';
+					echo '<div class="focus-block-pad">';
+						echo '<h2>' . $name . '</h2>';
+						echo '<div class="focus-block-plus"><svg class="icon  icon--plus" viewBox="0 0 5 5" ><path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" /></svg></div>';
+					echo '</div><!-- focus block pad -->';
+				echo '</div><!-- focus block info -->';
+				
+			echo '</a>';
+		echo '</div><!-- focus block -->';
+
+
+	/*
+
+
+			Run the Rest of the Terms and exclude the current
+
+	*/
 	$cat_args=array(
 	  'orderby' => 'name',
 	  'order' => 'ASC',
+	  'exclude' => $term_id, // exclude the current Term
 	  'hide_empty' => false
 	);
-	$categories=get_terms( 'focus_area', $cat_args );
+	$categories = get_terms( 'focus_area', $cat_args );
 
+	
 	// Loop through categories and randomly assign the image gallery to each category.
 	foreach($categories as $category) : 
 		
-		echo '<div class="focus-block">';
+		echo '<div class="focus-block focus-block-small">';
 		echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
+			
 			// pop an image off;
 			$element = array_pop($images);
 			echo '<img src="'.$element['sizes']['large-square'] .'" alt="'.$element['alt'].'" />';
@@ -131,13 +171,7 @@ $desc = get_field('description', $taxonomy . '_' . $term_id);
 
 
 ?>
-	 <!-- Ending Block -->
-	<div class="focus-block">
-		<div class="focus-block-first-info">
-			<!-- <h3 class="js-last-word">Our Focus Areas</h3> -->
-			<p>Let us help you find <br> the <b>right person</b> for <br>the <b>right role</b>.</p>
-		</div><!-- focus block first info -->
-	</div><!-- focus block -->
+	 
 
 
 </section><!-- focus areas -->

@@ -43,7 +43,11 @@ get_header(); ?>
 					</div><!-- plus -->
 	 			</div>
 	 		</article>
-	 	<?php endwhile; endif; ?>
+	 	<?php endwhile; 
+
+	 		pagi_posts_nav();
+
+	 	endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

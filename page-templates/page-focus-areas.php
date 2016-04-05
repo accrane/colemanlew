@@ -18,17 +18,17 @@ $categories=get_terms( 'focus_area', $cat_args );
 
 <nav class="sub-nav">
 
-<li class="first-in-nav">focus areas</li>
+	<li class="first-in-nav">focus areas</li>
 
-<?php foreach($categories as $category) : 
+	<?php foreach($categories as $category) : 
 
-	echo '<li>';
-		echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
-			echo $category->name;
-		echo '</a>';
-	echo '</li>';
-endforeach;
-?>
+		echo '<li>';
+			echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
+				echo $category->name;
+			echo '</a>';
+		echo '</li>';
+	endforeach;
+	?>
 </nav>	
 
 
@@ -69,7 +69,7 @@ endforeach;
 
 ################################################-->
 
-<section class="focus-areas">
+<section class="focus-areas ">
 
 	
 	<?php 
@@ -85,7 +85,7 @@ endforeach;
 	// Loop through categories and randomly assign the image gallery to each category.
 	foreach($categories as $category) : 
 		
-		echo '<div class="focus-block">';
+		echo '<div class="focus-block focus-block-large">';
 		echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
 			// pop an image off;
 			$element = array_pop($images);
@@ -110,7 +110,7 @@ endforeach;
 
 ?>
 	 <!-- Ending Block -->
-	<div class="focus-block">
+	<div class="focus-block focus-block-large">
 		<div class="focus-block-first-info">
 			<!-- <h3 class="js-last-word">Our Focus Areas</h3> -->
 			<p>Let us help you find <br> the <b>right person</b> for <br>the <b>right role</b>.</p>

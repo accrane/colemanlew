@@ -1,15 +1,38 @@
 $background-white: #fff;
 $background-black: #000;
 // $background: hsl(210, 45, 10);
-.soc {
-  width: auto;
-  float: right;
+.center {
+  width: 100%;
+  text-align: center;
+}
+.soc-show {
+  display: none;
+
+  @media screen and (min-width: $midwidth) {
+    display: inline-block;
+  }
+}
+.soc-hide {
   display: inline-block;
-  font-size: 0;
+
+  @media screen and (min-width: $midwidth) {
+    display: none;
+  }
+}
+.soc {
+  width: 80px;
+  margin: 10px auto;
+ font-size: 0;
   list-style: none;
-  margin: 0;
   padding: 0;
   text-align: center;
+
+  @media screen and (min-width: $midwidth) {
+    margin: 0;
+    float: right;
+    width: auto;
+   }
+  
   
   li {
     display: inline-block;

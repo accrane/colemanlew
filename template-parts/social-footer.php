@@ -1,4 +1,4 @@
-<ul class="soc soc-show">
+<ul class="soc soc-hide">
 <?php 
 $twitter = get_field('twitter_link', 'option');
 $facebook = get_field('facebook_link', 'option');

@@ -3,10 +3,20 @@
 	display: block;
 	text-align: center;
 	width: 100%;
+
+	@media screen and (min-width: $tabwidth) {
+
+	}
 	@media screen and (min-width: $midwidth) {
+		
+		clear: both;
+		margin-top: 30px;
+	}
+	@media screen and (min-width: $deskwidth) {
 		width: auto;
 		clear: none;
 		float: right;
+		margin-top: 10px;
 	}
 
 	ul {
@@ -16,12 +26,18 @@
 		padding-left: 0;
 
 		ul {
-			background-color: rgba($color-dark-grey, .8);
-			float: left;
-			position: absolute;
-			top: 38px;
-			left: -999em;
-			z-index: 99999;
+			
+			
+			
+
+			@media screen and (min-width: $midwidth) {
+				position: absolute;
+				top: 38px;
+				left: -999em;
+				z-index: 99999;
+				background-color: rgba($color-dark-grey, .8);
+				float: left;
+			}
 
 			ul {
 				left: -999em;
@@ -30,17 +46,37 @@
 
 			li {
 				margin: 0;
-				text-align: left;
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+				border-bottom: 0 solid $color-red;
+
+				font: {
+					family: $font__heading;
+					size: 13px;
+				}
+				@media screen and (min-width: $midwidth) {
+					font-size: 12px;
+					width: auto;
 					text-align: left;
 				}
+				&:hover > ul,
+				&.focus > ul {
+					@media screen and (min-width: $tabwidth) {
+						left: 100%;
+						text-align: left;
+					}
+					
+				}
 			}
-
+			li.current-menu-item::after {
+				content: '';
+			}
 			a {
-				width: 200px;
-				color: #fff
+				width: auto;
+
+				@media screen and (min-width: $midwidth) {
+					width: 200px;
+					color: #fff
+				}
+				
 			}
 
 			:hover > a,
@@ -61,24 +97,36 @@
 		}
 	}
 	li {
+		width: 100%;
 		display: inline-block;
 		position: relative;
 		margin: 0 0 0 0px;
 		text-transform: uppercase;
+		border-bottom: 1px solid #eee;
+
 		font: {
 			family: $font__heading;
 			size: 15px;
 		}
-		@media screen and (min-width: $tabwidth) {
-			font-size: 12px;
-		}
+		// @media screen and (min-width: $tabwidth) {
+		// 	font-size: 12px;
+			
+		// }
 		@media screen and (min-width: $midwidth) {
 			font-size: 14px;
-			float: left;
+			
+			width: auto;
+			border-bottom: 0 solid $color-red;
 		}
 		@media screen and (min-width: $deskwidth) {
-			font-size: 15px;
+			font-size: 14px;
 			margin-right: 10px;
+			float: left;
+
+			&.last {margin-right: 0;}
+		}
+		@media screen and (min-width: $largedeskwidth) {
+			font-size: 15px;
 		}
 
 		&:hover > a,
@@ -86,20 +134,24 @@
 		}
 	}
 	li.dropdown::after {
-		content: url(images/arrow.png);
-	    width: 8px;
-	    height: 6px;
-	    position: absolute;
-	    right: -1px;
-    	top: 5px;
+		@media screen and (min-width: $midwidth) {
+			content: url(images/arrow.png);
+		    width: 8px;
+		    height: 6px;
+		    position: absolute;
+		    right: -1px;
+	    	top: 5px;
+	    }
 	}
 	li.current-menu-item::after {
-		content: url(images/arrow-hover.png);
-	    width: 8px;
-	    height: 6px;
-	    position: absolute;
-	    right: -1px;
-    	top: 5px;
+		@media screen and (min-width: $midwidth) {
+			content: url(images/arrow-hover.png);
+		    width: 8px;
+		    height: 6px;
+		    position: absolute;
+		    right: -1px;
+	    	top: 5px;
+	    }
 	}
 	a {
 		display: block;
@@ -127,7 +179,23 @@
 	}
 }
 body.home .main-navigation {
-	a {color: #fff;}
+	@media screen and (min-width: $midwidth) {
+		a {
+			color: #fff;
+		}
+	}
+	
+
+	li.dropdown::after {
+		@media screen and (min-width: $midwidth) {
+			content: url(images/arrow-white.png);
+		    width: 8px;
+		    height: 6px;
+		    position: absolute;
+		    right: -1px;
+	    	top: 5px;
+	    }
+	}
 }
 /* Small menu. */
 .menu-toggle,
@@ -135,7 +203,7 @@ body.home .main-navigation {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: $midwidth) {
 	.menu-toggle {
 		display: none;
 	}
@@ -162,5 +230,27 @@ body.home .main-navigation {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+button.menu-toggle {
+	border: 0px;
+	text-shadow: none;
+	background-color: $color-red;
+	color: #fff;
+	box-shadow: none;
+	width: auto;
+	display: inline-block;
+	margin: 20px auto;
+	border-radius: 0;
+	text-transform: uppercase;
+	font: {
+		family: $font__heading;
+		weight :300;
+		size: 20px;
+	}
+	
+	@media screen and (min-width: $midwidth) {
+		display: none;
 	}
 }
