@@ -77,7 +77,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'classes' => 'coleman-lew-red',
       //'wrapper' => true,
       'styles' => array(
-            'color'         => '#ff0000', // or hex value #ff0000
+            'color'         => '#D61E36', // or hex value #ff0000
             //'fontWeight'    => 'bold',
             //'textTransform' => 'uppercase'
         )

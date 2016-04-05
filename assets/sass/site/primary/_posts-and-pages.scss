@@ -1204,49 +1204,50 @@ nav.sub-nav {
 	margin-top: -1px;
 	text-align: left;
 }
-.tabs {
+.tabs-cont {
 	text-align: center;
 	ul.tabs {
 		margin: 0 !important;
-		padding: 0;
-	}
-	li {
-		list-style:none;
-		display:inline;
-		width: 100%;
-		font: {
-			family: $font__heading;
-			size: 12px;
+		padding: 0 !important;
+		li {
+			list-style:none;
+			display:inline;
+			width: 100%;
+			font: {
+				family: $font__heading;
+				size: 12px;
+			}
+			@media screen and (min-width: $tabwidth) {
+				font-size: 12px;
+				width: auto;
+			}
+			@media screen and (min-width: $tabwidth) {
+				font-size: 14px;
+			}
 		}
-		@media screen and (min-width: $tabwidth) {
-			font-size: 12px;
-			width: auto;
-		}
-		@media screen and (min-width: $tabwidth) {
-			font-size: 14px;
-		}
-	}
-	a {
-		padding:10px 10px;
-		display:inline-block;
-		background: $color-light-grey;
-		color:#fff;
-		text-decoration:none;
-		border-top: 1px solid $color-light-grey;
-		border-right: 1px solid $color-light-grey;
-		border-left: 1px solid $color-light-grey;
-		width: 100%;
-		@media screen and (min-width: $tabwidth) {
-			padding:10px 5px;
-		}
-		@media screen and (min-width: $midwidth) {
+		a {
 			padding:10px 10px;
-			width: auto;
+			display:inline-block;
+			background: $color-light-grey;
+			color:#fff;
+			text-decoration:none;
+			border-top: 1px solid $color-light-grey;
+			border-right: 1px solid $color-light-grey;
+			border-left: 1px solid $color-light-grey;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				padding:10px 5px;
+			}
+			@media screen and (min-width: $midwidth) {
+				padding:10px 10px;
+				width: auto;
+			}
+		}
+		a.active {
+			background:#fff;
+			color:#000;
 		}
 	}
-	a.active {
-		background:#fff;
-		color:#000;
-	}
+	
 }
 

@@ -39,7 +39,7 @@ endwhile;
 	 ?>
 	
 <div class="content-wrapper ">
-	<div class="tabs">
+	<div class="tabs-cont">
 		<ul class='tabs'>
 			<li><a href='#tab1'>Executive Assessment</a></li>
 			<li><a href='#tab2'>Executive Coaching</a></li>
