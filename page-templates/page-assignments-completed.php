@@ -7,12 +7,18 @@ get_header(); ?>
 <div class="small-wrapper">
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
+			<?php while(have_posts()) : the_post(); ?>
+			<header class="entry-header">
+				<h1 class="entry-title js-last-word"><?php the_title(); ?></h1>
+			</header><!-- .entry-header -->
 
-
-
+			<div class="entry-content center">
+				<?php the_content(); ?>
+			</div>
+			
+<?php endwhile; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 
 </div><!-- wrapper -->
 
@@ -114,10 +120,10 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 	?>
 
 		<div class="jobsquare completed">
-			<a class="job-completed" href="<?php the_permalink(); ?>">
+			
 				<h3 class="completed"><?php the_title(); ?></h3>
 				<?php if( $forWho != '' ) {echo '<p>'.$forWho.'</p>';}?>
-			</a>
+			
 		</div><!-- jobsquare -->
 	<?php endwhile; ?>
 		

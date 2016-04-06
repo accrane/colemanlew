@@ -10,7 +10,7 @@
 get_header(); ?>
 <div class="content-wrapper">
 	<div id="primary" class="content-area-post js-blocks">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main single" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();

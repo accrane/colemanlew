@@ -91,6 +91,11 @@ body.home header#masthead {
 		height: 118px;
 	}
 }
+main.single {
+	@media screen and (min-width: $deskwidth) {
+		min-height: 500px;
+	}
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -121,6 +126,8 @@ body.home header#masthead {
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
+	position: relative;
+	z-index: 30;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 32%;
@@ -312,6 +319,8 @@ footer.site-footer {
 	color: #fff;
 	font-size: 12px;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 	clear: both;
 	padding-bottom: 20px;
 	overflow: hidden;
@@ -334,6 +343,7 @@ footer.site-footer {
 	.footer-right {
 		width: auto;
 		margin-top: 15px;
+
 
 		@media screen and (min-width: $tabwidth) {
 			float:right;

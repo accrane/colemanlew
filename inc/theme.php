@@ -186,3 +186,21 @@ function ac_first_and_last_menu_class($items) {
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');
 
+function is_tree($pid)
+{
+  global $post;
+ 
+  $ancestors = get_post_ancestors($post->$pid);
+  $root = count($ancestors) - 1;
+  $parent = $ancestors[$root];
+ 
+  if(is_page() && (is_page($pid) || $post->post_parent == $pid || in_array($pid, $ancestors)))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+};
+

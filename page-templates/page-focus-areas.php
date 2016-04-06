@@ -18,7 +18,9 @@ $categories=get_terms( 'focus_area', $cat_args );
 
 <nav class="sub-nav">
 
-	<li class="first-in-nav">focus areas</li>
+	<li class="first-in-nav">
+		<a href="<?php bloginfo('url'); ?>/focus-areas">focus areas</a>
+	</li>
 
 	<?php foreach($categories as $category) : 
 

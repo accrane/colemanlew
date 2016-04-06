@@ -1,4 +1,10 @@
-<section class="process">
+
+<?php if(is_front_page()) {
+	$class = 'process-home';
+} else {
+	$class = 'process-page';
+} ?>
+<section class="process <?php echo $class; ?>">
 	<h2 class="js-last-word">Our Search Process</h2>
 	<?php 
 	$i=0;

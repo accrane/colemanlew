@@ -41,7 +41,9 @@ $navCategories = get_terms( 'focus_area', $navArgs );
 
 <nav class="sub-nav">
 
-	<li class="first-in-nav">focus areas</li>
+	<li class="first-in-nav">
+		<a href="<?php bloginfo('url'); ?>/focus-areas">focus areas</a>
+	</li>
 
 	<?php foreach($navCategories as $nav) : 
 

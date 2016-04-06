@@ -3,7 +3,16 @@
  * Template Name: Professionals
  */
 
-get_header(); ?>
+get_header(); 
+
+$content = get_field('page_content');
+
+?>
+<nav class="sub-nav with-pad">
+	
+		<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 5 ) ); ?>
+	
+</nav>
 <div class="small-wrapper">
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
@@ -12,8 +21,8 @@ get_header(); ?>
 				<h1 class="entry-title js-last-word"><?php the_title(); ?></h1>
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<?php the_content(); ?>
+			<div class="entry-content center">
+				<?php echo $content; ?>
 			</div>
 			
 
@@ -71,6 +80,9 @@ get_header(); ?>
     			<div class="pop-fade"></div>
     			<div class="pop-content">
     				<h2><?php the_title(); ?></h2>
+    				<?php if( $position != '' ) {
+		    			echo '<div class="position">'.$position.'</div>';
+		    		} ?>
     				<?php echo $bio; ?>
     			</div>
     		</div>

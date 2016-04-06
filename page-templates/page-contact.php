@@ -9,11 +9,26 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
 
-				get_template_part( 'template-parts/content', 'page' );
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title js-last-word">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
 
-			endwhile; // End of the loop.
+					<div class="entry-content">
+						<?php
+
+							the_content();
+
+							
+						?>
+					</div><!-- .entry-content -->
+
+					
+				</article><!-- #post-## -->
+
+			<?php endwhile; // End of the loop.
 			?>
 
 		</main><!-- #main -->

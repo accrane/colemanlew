@@ -4,6 +4,9 @@
  */
 
 get_header(); ?>
+<nav class="sub-nav with-pad">
+	<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 5 ) ); ?>
+</nav>
 <div class="content-wrapper">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
