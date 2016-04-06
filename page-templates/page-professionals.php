@@ -7,6 +7,11 @@ get_header();
 
 $content = get_field('page_content');
 
+// Extra box
+$enableBox = get_field('enabe_box');
+$extraBox = get_field('extra_box');
+$boxLink = get_field('box_link');
+
 ?>
 <nav class="sub-nav with-pad">
 	
@@ -95,6 +100,27 @@ $content = get_field('page_content');
     </div>
 
 <?php endwhile; endif; ?>
+
+<?php if( $enableBox == 'Enable' ) :?>
+	<div class="professional-extra">
+
+    		<a href="
+	    		<?php if( $boxLink != '' ) { ?>
+	    			<?php echo $boxLink; ?>
+	    		<?php } else {
+	    			echo '#';
+	    		}?>
+    		">
+    		
+	    			<?php if( $extraBox != '' ) { echo $extraBox; } ?>
+    		
+    			</a>
+    		
+    	
+
+    </div><!-- professional -->
+<?php endif; ?>
+
 </section>
 
 

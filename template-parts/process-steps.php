@@ -5,7 +5,11 @@
 	$class = 'process-page';
 } ?>
 <section class="process <?php echo $class; ?>">
+	<?php if(is_front_page()) { ?>
 	<h2 class="js-last-word">Our Search Process</h2>
+	<?php } else { ?>
+		<h3 class="our-four-step">Our 4 step Process.</h3>
+	<?php } ?>
 	<?php 
 	$i=0;
 	

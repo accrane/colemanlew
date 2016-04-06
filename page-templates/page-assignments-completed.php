@@ -119,19 +119,19 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 
 	?>
 
-		<div class="jobsquare completed">
-			
+		<div class="jobsquare">
+			<div class="completed-square">
 				<h3 class="completed"><?php the_title(); ?></h3>
 				<?php if( $forWho != '' ) {echo '<p>'.$forWho.'</p>';}?>
-			
+			</div>
 		</div><!-- jobsquare -->
 	<?php endwhile; ?>
 		
 		<div class="jobsquare ">
-			<a class="job-red" href="<?php bloginfo('url'); ?>/contact-us">
+			<div class="completed-square">
 				<h3 class="talk">Let's Talk</h3>
 				<p>about your open chair</p>
-			</a>
+			</div>
 		</div><!-- jobsquare -->
 
 

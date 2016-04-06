@@ -58,37 +58,8 @@ endwhile; // End of the loop.
             <li> 
               
 				<div class="slider-story">
-					<div class="slider-story-left col js-blocks-no">
-						<header class="story-type">
-							<div class="story-wrap">
-							<?php 
-
-							
-							$terms = get_the_terms( get_the_ID(), 'story_type' );
-                         
-							if ( $terms && ! is_wp_error( $terms ) ) : 
-							 
-							    //$storyTypes = array();
-							 
-							    foreach ( $terms as $term ) {
-							        //$storyTypes[] = $term->name;
-							        //print_r($storyTypes) ;
-							        $name = $term->name;
-							    }
-							                         
-							    //$storyType = join( "", $storyTypes );
-							    ?>
- 								<div class="js-first-word"><?php echo $name; ?></div>
-    
-        
-  
-								<?php endif; ?>
-						
-							</div><!-- -->
-						</header>
-						<div class="story-wrap-quote"><?php echo $quote; ?></div><!-- story-wrap -->
-					</div><!-- story left -->
-					<div class="slider-story-right col js-blocks-no">
+					
+					<div class="slider-story-right col">
 						<header class="story-title">
 							<div class="story-wrap">
 							<?php the_title(); ?>

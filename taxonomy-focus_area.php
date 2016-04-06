@@ -113,10 +113,12 @@ $navCategories = get_terms( 'focus_area', $navArgs );
 
 	*/
 	echo '<div class="focus-block focus-block-small">';
-		echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $slug . '">';
-			
-			// Repeat the Hero of the page here first.
+		// Repeat the Hero of the page here first.
 			echo '<img src="'.$firstElement['sizes']['large-square'] .'" alt="'.$firstElement['alt'].'" />';
+		//echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $slug . '">';
+		
+			
+			
 
 				// div info contents
 				echo '<div class="focus-block-info">';
@@ -125,8 +127,9 @@ $navCategories = get_terms( 'focus_area', $navArgs );
 						echo '<div class="focus-block-plus"><svg class="icon  icon--plus" viewBox="0 0 5 5" ><path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" /></svg></div>';
 					echo '</div><!-- focus block pad -->';
 				echo '</div><!-- focus block info -->';
-				
-			echo '</a>';
+				echo '<div class="focus-active"></div>';
+			//echo '</a>';
+			
 		echo '</div><!-- focus block -->';
 
 

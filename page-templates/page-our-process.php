@@ -54,7 +54,7 @@ $i = rand(0, $row_count - 1);
 
 </div><!-- wrapper -->
 
-
+<div class="div-border"></div>
 
 <?php
 endwhile; // End of the loop. ?>
