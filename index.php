@@ -78,7 +78,7 @@ get_header(); ?>
 
 
 	<div class="link-square">
-		<a href="<?php get_permalink($num); ?>">
+		<a href="<?php echo get_permalink($num); ?>">
 			<div class="wrapme">
 				<h3>
 					<?php echo get_the_title($num); ?>
@@ -114,7 +114,7 @@ get_header(); ?>
 		<section class="focus-areas">
 
 			<!-- Starter Block -->
-			<div class="focus-block  focus-block-large">
+			<div class="focus-block  focus-block-large squareme">
 				<div class="focus-block-first-info">
 					<h3 class="js-last-word">Our Focus Areas</h3>
 					<p>Let us help you find <br> the <b>right person</b> for <br>the <b>right role</b>.</p>
@@ -172,12 +172,14 @@ get_header(); ?>
 			Search Process Section
 
 ################################################-->
+
 <?php 
 /*  
 *		Query Our Process Page
 */
 $post = get_post(9); 
 setup_postdata( $post );
+
 	echo '<div class="content-wrapper">';
 	get_template_part('template-parts/process-steps');
 	echo '</div>';
@@ -207,7 +209,7 @@ wp_reset_postdata();
 		
 		if( $pContent ) {
 			echo '<div class="map-contents">';
-				echo '<h2 class="js-last-word">' . get_the_title() . '</h2>';
+				echo '<h2 class="js-last-word"><a href="'.get_bloginfo('url').'/about">' . get_the_title() . '</a></h2>';
  				echo $pContent;
 			echo '</div><!-- map-contents -->';
 		}

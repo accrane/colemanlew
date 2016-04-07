@@ -101,6 +101,7 @@ jQuery(document).ready(function ($) {
 
         heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
     });
+    
 	/*
 	*
 	*	Make a Break in the title off the fist word

@@ -42,6 +42,16 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop.
 		?>
+	<nav class="other-positions">
+		<h4>View Other Positions</h4>
+		<div class="next-post">
+			<?php next_post_link( '%link', '%title &raquo;' ); ?>
+		</div>
+
+		<div class="prev-post">
+			<?php previous_post_link( '%link', '&laquo; %title' ); ?>
+		</div>
+	</nav>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
