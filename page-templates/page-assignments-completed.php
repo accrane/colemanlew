@@ -128,7 +128,7 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 	<?php endwhile; ?>
 		
 		<div class="jobsquare ">
-			<a class="job-completed" href="#">
+			<a class="job-completed" href="<?php bloginfo('url'); ?>/contact">
 			<div class="completed-square-red">
 				<h3 class="talk">Let's Talk</h3>
 				<p>about your open chair</p>
