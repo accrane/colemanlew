@@ -84,7 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 }
 .hero-headline {
 	font: {
-		family: $font__main;
+		family: $font__heading;
 		size: 24px;
 	}
 	margin: 0 0 10px 0;
@@ -139,6 +139,7 @@ section.intro {
 		margin: 2%;
 		float: left;
 		position: relative;
+
 		.wrapme {
 			padding: 5%;
 		}
@@ -175,6 +176,8 @@ section.intro {
 			top: 0;
 			left: 0;
 			text-decoration: none;
+			border: 1px solid #eee;
+			@include transition(.3s ease all);
 
 			&:hover {
 				background-color: $color-red;

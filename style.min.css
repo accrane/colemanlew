@@ -709,7 +709,7 @@ a:hover,a:active{outline:0}
 @media screen and (min-width:900px){.main-navigation{clear:both;margin-top:30px}
 }@media screen and (min-width:1200px){.main-navigation{width:auto;clear:none;float:right;margin-top:10px}
 }.main-navigation ul{display:none;list-style:none;margin:0;padding-left:0}
-@media screen and (min-width:900px){.main-navigation ul ul{position:absolute;top:38px;left:-999em;z-index:99999;background-color:rgba(64,64,65,0.8);float:left}
+@media screen and (min-width:900px){.main-navigation ul ul{position:absolute;top:36px;left:-999em;z-index:99999;background-color:rgba(64,64,65,0.8);float:left}
 }.main-navigation ul ul ul{left:-999em;top:0}
 .main-navigation ul ul li{margin:0;border-bottom:0 solid #d61e36;font-family:"Roboto Condensed",sans-serif;font-size:13px}
 @media screen and (min-width:900px){.main-navigation ul ul li{font-size:12px;width:auto;text-align:left}
@@ -1009,7 +1009,7 @@ html[xmlns] .flexslider .slides,html[xmlns] .flexslider-story .slides{display:bl
 .hero-headline-box{width:100%;position:absolute;top:10%;line-height:1.2}
 @media screen and (min-width:600px){.hero-headline-box{top:62%}
 }.hero-headline,.hero-headline-sub-1,.hero-headline-sub-2{width:100%;text-align:center;color:#fff;font-weight:300}
-.hero-headline{font-family:"Ubuntu",sans-serif;font-size:24px;margin:0 0 10px 0}
+.hero-headline{font-family:"Roboto Condensed",sans-serif;font-size:24px;margin:0 0 10px 0}
 @media screen and (min-width:600px){.hero-headline{font-size:30px}
 }@media screen and (min-width:1200px){.hero-headline{font-size:46px}
 }.hero-headline-sub-1,.hero-headline-sub-2{font-family:"Ubuntu",sans-serif;font-size:18px}
@@ -1024,7 +1024,7 @@ section.intro .link-square .wrapme{padding:5%}
 section.intro .link-square h3{margin-top:40%;width:auto;position:relative;padding-right:10px;font-family:"Roboto Condensed",sans-serif;font-size:16px;font-weight:400;text-transform:uppercase}
 section.intro .link-square h3 .plus{width:15px;position:absolute;top:0;right:0}
 section.intro .link-square h3 .plus .icon--plus>path{fill:#231f20;stroke:rgba(35,31,32,0);stroke-width:.5}
-section.intro .link-square a{width:100%;height:100%;display:block;color:#231f20;position:absolute;top:0;left:0;text-decoration:none}
+section.intro .link-square a{width:100%;height:100%;display:block;color:#231f20;position:absolute;top:0;left:0;text-decoration:none;border:1px solid #eee;-webkit-transition:.3s ease all;transition:.3s ease all}
 section.intro .link-square a:hover{background-color:#d61e36;color:#fff}
 section.intro .link-square a:hover h3{margin-top:40%;width:auto;position:relative}
 section.intro .link-square a:hover h3 .plus .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
