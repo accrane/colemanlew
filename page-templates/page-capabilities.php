@@ -4,6 +4,9 @@
  */
 
 get_header(); ?>
+<nav class="sub-nav with-pad">
+	<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 456 ) ); ?>
+</nav>
 <?php
 while ( have_posts() ) : the_post(); 
 	$image = get_field('background_image');

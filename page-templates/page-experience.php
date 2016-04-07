@@ -111,7 +111,7 @@ endwhile; // End of the loop.
 		<div class="entry-content"><?php echo $pContent; ?></div>
 
 		<div class="viewall">
-			<a href="<?php bloginfo('url'); ?>/completed-assignments">VIEW ALL</a>
+			<a href="<?php bloginfo('url'); ?>/completed-assignments">VIEW MORE</a>
 		</div>
 
 		</div>
