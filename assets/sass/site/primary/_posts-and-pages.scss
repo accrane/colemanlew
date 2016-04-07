@@ -892,6 +892,7 @@ section.completed {
 			}
 		}
 
+
 		@media screen and (min-width: $tabwidth) {
 			width: 18%;
 			margin: 1%;
@@ -949,7 +950,10 @@ section.completed {
 				image: url(images/chair-filled.png);
 				repeat: no-repeat;
 				position: bottom 0 right 0;
+				color: $color-red;
+
 			}
+			color: #fff;
 		}
 		a.job-red {
 			color: #fff;

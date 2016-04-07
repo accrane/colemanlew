@@ -128,10 +128,12 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 	<?php endwhile; ?>
 		
 		<div class="jobsquare ">
-			<div class="completed-square">
+			<a class="job-completed" href="#">
+			<div class="completed-square-red">
 				<h3 class="talk">Let's Talk</h3>
 				<p>about your open chair</p>
 			</div>
+			</a>
 		</div><!-- jobsquare -->
 
 

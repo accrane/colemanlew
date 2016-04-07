@@ -1146,7 +1146,7 @@ section.completed .jobsquare a .icon--plus>path{fill:#000;stroke:rgba(255,255,25
 section.completed .jobsquare a:hover{background-color:#d61e36;color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
 section.completed .jobsquare a:hover .icon--plus>path{fill:#fff;stroke:rgba(255,255,255,0);stroke-width:.5}
 section.completed .jobsquare a.job-active{background-image:url(images/chair-outline-black.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
-section.completed .jobsquare a.job-completed{background-image:url(images/chair-filled.png);background-repeat:no-repeat;background-position:bottom 0 right 0}
+section.completed .jobsquare a.job-completed{background-image:url(images/chair-filled.png);background-repeat:no-repeat;background-position:bottom 0 right 0;background-color:#d61e36;color:#fff}
 section.completed .jobsquare a.job-red{color:#fff;background-image:url(images/chair-outline-white.png);background-repeat:no-repeat;background-position:bottom 0 right 0;background-color:#d61e36}
 section.completed .jobsquare h3.current{text-align:center;text-transform:uppercase}
 section.completed .jobsquare h3.completed{text-align:left;text-transform:uppercase}
