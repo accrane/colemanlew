@@ -140,10 +140,18 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('a.professionals').colorbox({
-		inline:true,
+		// inline:true,
+		iframe: true,
 		rel: 'people',
 		width: '100%', 
-		height: '100%'
+		height: '100%',
+		// scrolling: true
+		 //fixed: true
+	});
+	$(document).bind('cbox_open', function() {
+	    $('html').css({ overflow: 'hidden' });
+	}).bind('cbox_closed', function() {
+	    $('html').css({ overflow: '' });
 	});
 	
 	/*

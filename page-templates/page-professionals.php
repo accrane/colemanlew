@@ -65,7 +65,7 @@ $boxLink = get_field('box_link');
     <div class="professional">
 
     	<div class="professional-hover">
-    		<a class="professionals" href="#<?php echo $sanitized; ?>">
+    		<a class="professionals" href="<?php the_permalink();//echo $sanitized; ?>">
 	    		<h2><?php the_title(); ?></h2>
 	    		<?php if( $position != '' ) {
 	    			echo '<div class="position">'.$position.'</div>';
@@ -102,6 +102,7 @@ $boxLink = get_field('box_link');
 <?php endwhile; endif; ?>
 
 <?php if( $enableBox == 'Enable' ) :?>
+
 	<div class="professional-extra">
 
     		<a href="

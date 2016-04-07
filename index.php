@@ -31,6 +31,8 @@ get_header(); ?>
 	$subHeadTwo = get_field('sub_headline_2');
 	$size = 'full';
 
+	
+
 	if( $image ) {
 		echo '<div class="hero">';
 		echo '<div class="hero-grad"></div>';
@@ -49,9 +51,55 @@ get_header(); ?>
 				echo '</div><!-- hero-headline-box -->';
 
 		echo '</div><!-- hero -->';
-	}
+	} 
 
-	wp_reset_postdata();
+// Get some stuff for the next section
+	$sectionTitle = get_field('section_title');
+	$sectionCopy = get_field('section_copy');
+
+
+	?>
+
+
+<section class="intro">
+	 <div class="home-intro-content">
+		<h2 class="js-last-word"><?php echo $sectionTitle; ?></h2>
+		<?php echo $sectionCopy; ?>
+
+	<?php if(have_rows('section_links')) : while(have_rows('section_links')) : the_row();
+
+		$id = get_sub_field('link');
+		$num = $id[0];
+		// echo '<pre>';
+		// print_r($id);
+		// echo '</pre>';
+	 ?>
+
+
+
+	<div class="link-square">
+		<a href="<?php get_permalink($num); ?>">
+			<div class="wrapme">
+				<h3>
+					<?php echo get_the_title($num); ?>
+
+					<div class="plus">
+		 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
+						    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
+						</svg>
+					</div><!-- plus -->
+				</h3>
+			</div>
+		</a>
+	</div><!-- link square -->
+
+	 
+
+<?php endwhile; endif; ?>
+</div><!-- small wrapper -->
+</section>
+
+<?php	wp_reset_postdata(); // close the homepage query.
 //endif; // end if home
 ?>
 

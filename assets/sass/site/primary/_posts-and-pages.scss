@@ -72,7 +72,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	line-height: 1.2;
 
 	@media screen and (min-width: $tabwidth) {
-		top: 52%;
+		top: 62%;
 	}	
 }
 .hero-headline, .hero-headline-sub-1, .hero-headline-sub-2
@@ -106,6 +106,100 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	}
 	@media screen and (min-width: $deskwidth) {
 		font-size: 24px;
+	}
+}
+section.intro {
+	margin-bottom: 30px;
+	.home-intro-content {
+		width: 100%;
+		margin: 0px auto;
+		padding: 20px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+
+		h2 {
+			font: {
+				family: $font__heading;
+				size: 30px;
+				weight: 300;
+			}
+		}
+		
+		@media screen and (min-width: $tabwidth) {
+			
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 70%;
+			padding: 20px 10%;
+		}
+	}
+	.link-square {
+		width: 28%;
+		margin: 2%;
+		float: left;
+		position: relative;
+		.wrapme {
+			padding: 5%;
+		}
+		h3 {
+			margin-top: 40%;
+			width: auto;
+			position: relative;
+			padding-right: 10px;
+			font: {
+				family: $font__heading;
+				size: 16px;
+				weight: 400;
+			}
+			text-transform: uppercase;
+			.plus {
+				width: 15px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				.icon--plus > path {
+				    fill: $color-dark-black;
+				    stroke: rgba($color-dark-black, 0);
+				    stroke-width: 0.5;
+				}		
+			}
+		}
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			color: $color-dark-black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-decoration: none;
+
+			&:hover {
+				background-color: $color-red;
+				color: #fff;
+				h3 {
+					margin-top: 40%;
+					width: auto;
+					position: relative;
+					.plus {
+						.icon--plus > path {
+						    fill: #fff;
+						    stroke: rgba(255,255,255, 0);
+						    stroke-width: 0.5;
+						}		
+					}
+				} // h3
+			} // hover
+		} //a
+
+		
+	}
+	.link-square:after {
+	  content: "";
+	  display: block;
+	  padding-bottom: 100%;
 	}
 }
 // Our Process
@@ -281,6 +375,7 @@ section.about {
 		z-index: 5;
 		float: right;
 		padding: 5%;
+		font-size: 16px;
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
 		background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -288,15 +383,31 @@ section.about {
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
 
 		@media screen and (min-width: $tabwidth) {
-			width: 50%;
+			width: 40%;
 			height: 100%;
+			
+			font-size: 14px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 16px;
+			padding: 5% 15% 5% 5%;
 		}
 		@media screen and (min-width: $deskwidth) {
 			padding: 5% 15% 5% 5%;
+			font-size: 20px;
+		}
+		h2 {
+			font-size: 20px;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 22px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 24px;
+			}
 		}
 	}
 	@media screen and (min-width: $tabwidth) {
-		
+		font-size: 14px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		
@@ -1048,27 +1159,40 @@ section.professionals {
 			}
 		}
 }
+.black {
+	background-color: #000;
+	width: 100%;
+	overflow: hidden;
+}
 .profess-popup {
 	width: 100%;
 	background-color: #000;
 	height: 100%;
-	position: relative;
-	margin-top: 50px;
+	overflow: hidden;
+	display: block;
+	padding-bottom: 40%;
+	// overflow: hidden;
+	// position: fixed;
+	//margin-top: 50px;
+	// overflow: scroll;
+	
 
 	@media screen and (min-width: $tabwidth) {
 		margin-top: 0px;
 	}
 	@media screen and (min-width: $midwidth) {
-		margin-top: 160px;
+		// margin-top: 160px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		margin-top: 118px;
+		// margin-top: 118px;
 	}
 }
 .pop-fade-wrap {
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 	z-index: 8;
+	// background-color: #000;
 	@media screen and (min-width: $tabwidth) {
 		width: 90%;
 		//height: 100%;
@@ -1084,7 +1208,7 @@ section.professionals {
 	position: relative;
 	z-index: 8;
 	@media screen and (min-width: $tabwidth) {
-		width: 80%;
+		// width: 80%;
 		//height: 100%;
 		position: absolute;
 		right: 0;
@@ -1099,14 +1223,19 @@ section.professionals {
 }
 .pop-image {
 	width: 100%;
+	height: 100%;
 	z-index: 7;
 	position: relative;
+	background-color: #000;
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
 
 	@media screen and (min-width: $tabwidth) {
 		// width: 45%;
-		position: absolute;
+		position: fixed;
 		top: 0;
-		right: -20%;
+		right: 0;
 	}
 	img {
 		width: 100%;
@@ -1120,8 +1249,10 @@ section.professionals {
 	float: left;
 	position: relative;
 	z-index: 10;
-	margin: 10%;
-	background-color: #000; 
+	margin: 5%;
+	// background-color: #000; 
+	// height: 80%;
+	// overflow: scroll;
 
 	.position {
 		font: {
