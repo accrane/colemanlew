@@ -844,8 +844,35 @@ section.pad {
 .no-pad {
 	padding-bottom: 0px;
 }
+.viewall {
+	width: auto;
+	display: inline-block;
+	margin: 10px auto;
+
+	a {
+		color: $color-red;
+		text-decoration: none;
+		display: inline-block;
+		padding: 10px 20px;
+		@include transition(.3s ease all);
+
+		&:hover {
+			background-color: $color-red;
+			color: #fff;
+
+		}
+	}
+}
 section.completed {
 	margin-bottom: 30px;
+
+	h2 {
+		font: {
+			family: $font__heading;
+			weight: 400;
+		}
+	}
+
 	.jobsquare {
 		position: relative;
 		width: 100%;
@@ -1025,7 +1052,7 @@ section.completed {
 article.news-first-post {
 	@media screen and (min-width: $tabwidth) {
 		border-right: 1px solid #BBBDC0;
-		margin: 2%;
+		margin:  2% 2% 60px 2%;
 		float: left;
 	}
 }
@@ -1033,7 +1060,7 @@ article.news-last-post {
 	
 
 	@media screen and (min-width: $tabwidth) {
-		margin: 2%;
+		margin: 2% 2% 60px 2%;
 		float: left;
 	}
 }
@@ -1324,7 +1351,7 @@ header.stories {
 	color: #fff;
 	text-transform: uppercase;
 	text-align: left;
-	padding: 10px 0 10px 30px;
+	padding: 10px 0 10px 50px;
 	font: {
 		size: $font__heading;
 		size: 24px;
@@ -1345,10 +1372,10 @@ header.stories {
 	overflow: hidden;
 
 	.story-wrap {
-		padding: 20px 30px 0 30px;
+		padding: 20px 50px 0 50px;
 	}
 	.story-wrap-cont {
-		padding: 0px 30px 0 30px;
+		padding: 0px 50px 30px 50px;
 	}
 	.story-wrap-quote {
 		padding: 20px 40% 0 20px;
@@ -1473,9 +1500,9 @@ nav.sub-nav {
 	margin-bottom: 40px;
 }
 .tabs-border {
-	border: 1px solid $color-light-grey;
+	
 	padding: 20px;
-	margin-top: -1px;
+	
 	text-align: left;
 }
 .tabs-cont {
@@ -1500,7 +1527,7 @@ nav.sub-nav {
 			}
 		}
 		a {
-			padding:10px 10px;
+			padding:20px 20px;
 			display:inline-block;
 			background: $color-light-grey;
 			color:#fff;
@@ -1510,16 +1537,16 @@ nav.sub-nav {
 			border-left: 1px solid $color-light-grey;
 			width: 100%;
 			@media screen and (min-width: $tabwidth) {
-				padding:10px 5px;
+				padding:20px 15px;
 			}
 			@media screen and (min-width: $midwidth) {
-				padding:10px 10px;
+				padding:20px 20px;
 				width: auto;
 			}
 		}
 		a.active {
-			background:#fff;
-			color:#000;
+			background:$color-red;
+			color:#fff;
 		}
 	}
 	

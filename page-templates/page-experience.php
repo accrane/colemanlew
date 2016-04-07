@@ -92,9 +92,30 @@ endwhile; // End of the loop.
 
 	
 	
+<?php // Get completed page content first
 
+	$post = get_post(19); 
+	setup_postdata( $post );  
+
+	$pTitle = get_the_title();
+	$pContent = get_the_content();
+
+
+	wp_reset_postdata(); ?>
 <section class="completed">
 	
+	<div class="small-wrapper">
+		<div class="center">
+		<h2 class="js-last-word"><?php echo $pTitle; ?></h2>
+
+		<div class="entry-content"><?php echo $pContent; ?></div>
+
+		<div class="viewall">
+			<a href="<?php bloginfo('url'); ?>/completed-assignments">VIEW ALL</a>
+		</div>
+
+		</div>
+	</div><!-- small wrapper -->
 
 	<?php
 	$wp_query = new WP_Query();
@@ -120,22 +141,20 @@ endwhile; // End of the loop.
 		<ul class="slides">
 			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
-	//$forWho = get_field('for_who');
+	$forWho = get_field('for_who');
 
 	?>
 
 		<li>
-				<div class="jobsquare-slider ">
-					<a class="" href="<?php the_permalink(); ?>">
-						<h3><?php the_title(); ?></h3>
-						<div class="focus-block-plus">
-			 				<svg class="icon  icon--plus" viewBox="0 0 5 5" >
-							    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
-							</svg>
-						</div><!-- plus -->
-					</a>
-				</div><!-- jobsquare -->
-			</li>
+			<div class="jobsquare-slider ">
+				<div class="completed-square">
+					<div class="wrapme">
+					<h3 class="completed"><?php the_title(); ?></h3>
+					<?php if( $forWho != '' ) {echo '<p>'.$forWho.'</p>';}?>
+					</div>
+				</div>
+			</div><!-- jobsquare -->
+		</li>
 
 			<?php endwhile; ?>
 		</ul>

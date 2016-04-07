@@ -86,6 +86,44 @@ html[xmlns] .flexslider .slides, html[xmlns] .flexslider-story .slides {
     position: relative;
     width: 100%;
     float: left;
+
+    & .completed-square {
+      position: absolute;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: {
+        image: url(images/chair-filled.png);
+        repeat: no-repeat;
+        position: bottom 0 right 0;
+        color: #f3f3f3;
+      }
+      h3 {text-align: left;}
+      p {
+        display: block;
+        width: 90%;
+        text-align: left;
+        margin: 10px auto 0 auto;
+        font: {
+          family: $font__main;
+          weight: 400;
+          size: 14px;
+        }
+        @media screen and (min-width: $tabwidth) {
+          font-size: 12px;
+          line-height: 1;
+        }
+        @media screen and (min-width: $midwidth) {
+          font-size: 12px;
+          line-height: 1.1;
+        }
+        @media screen and (min-width: $deskwidth) {
+          font-size: 14px;
+          line-height: 1.3;
+        }
+      }
+    }
     
 
     &:after {

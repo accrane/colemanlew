@@ -32,6 +32,24 @@ div {
 		padding: 20px 5%;
 	}
 }
+.tabs-wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+	border-top: 1px solid $color-light-grey;
+	border-bottom: 1px solid $color-light-grey;
+	margin-top: -1px;
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+		padding: 0px 10%;
+	}
+}
 .content-wrapper {
 	width: 100%;
 	margin: 0px auto;
