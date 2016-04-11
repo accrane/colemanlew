@@ -35,9 +35,9 @@ wp_head(); ?>
 				?>
 			</div><!-- pop image -->
     		<div class="pop-fade-wrap">
-    			<div class="pop-fade"></div>
+    			<!-- <div class="pop-fade"></div> -->
     			<div class="pop-content">
-    				<h2><?php the_title(); ?></h2>
+    				<h2 class="js-last-word"><?php the_title(); ?></h2>
     				<?php if( $position != '' ) {
 		    			echo '<div class="position">'.$position.'</div>';
 		    		} ?>

@@ -77,12 +77,14 @@ endwhile;
 	
 
 	<div class="tabs-cont">
-		<ul class='tabs'>
-			<li><a href='#tab1'>Executive Assessment</a></li>
-			<li><a href='#tab2'>Executive Coaching</a></li>
-			<li><a href='#tab3'>Succession Planning</a></li>
-			<li><a href='#tab4'>New Leader Integration</a></li>
-		</ul>
+		<div class="tab-wrapper">
+			<ul class='tabs'>
+				<li><a href='#tab1'>Executive Assessment</a></li>
+				<li><a href='#tab2'>Executive Coaching</a></li>
+				<li><a href='#tab3'>Succession Planning</a></li>
+				<li><a href='#tab4'>New Leader Integration</a></li>
+			</ul>
+		</div>
 		<div class="tabs-wrapper ">
 			<div id='tab1' class="tabs-border entry-content">
 				<?php echo $executiveAssessment; ?>

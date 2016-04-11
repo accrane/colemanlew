@@ -70,7 +70,8 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 } ?>
 </section>
 
-<section class="completed">
+<section class="completed" >
+	<div id="assignments"></div>
 	<div class="wrapper">
 	<?php
 	$wp_query = new WP_Query();

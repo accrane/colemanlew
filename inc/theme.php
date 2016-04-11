@@ -91,6 +91,10 @@ function my_mce_before_init_insert_formats( $init_array ) {
     array(
         'title' => 'Header 3',
         'format' => 'h3'
+    ),
+    array(
+        'title' => 'Paragraph',
+        'format' => 'p'
     )
   );  
   // Insert the array, JSON ENCODED, into 'style_formats'

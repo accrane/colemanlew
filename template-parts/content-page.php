@@ -21,6 +21,10 @@
 			//the_content();
 		echo $content;
 
+		if(is_page('sitemap') ) {
+			wp_nav_menu( array( 'theme_location' => 'sitemap' ) );
+		}
+
 			
 		?>
 	</div><!-- .entry-content -->

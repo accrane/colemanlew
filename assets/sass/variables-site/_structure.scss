@@ -65,6 +65,21 @@ div {
 		padding: 20px 10%;
 	}
 }
+.tab-wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0 20px;
+	overflow: hidden;
+	position: relative;
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+		padding: 0 10%;
+	}
+}
 .small-wrapper {
 	width: 100%;
 	margin: 0px auto;

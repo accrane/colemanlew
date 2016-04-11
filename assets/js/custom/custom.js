@@ -49,7 +49,13 @@ jQuery(document).ready(function ($) {
 		}); // end register 
 	}());
 
+	function goToByScroll(id){
+		if ($.getUrlVar("focus_area") != null) {
 
+		
+	    	$('html,body').animate({scrollTop: $("#assignments"+id).offset().top},'slow');
+		}
+	}
 
 
 	(function() {

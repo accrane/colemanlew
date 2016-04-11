@@ -56,26 +56,36 @@
 	width: 100%;
 	position: absolute;
 	top: 0;
-	height: 400px;
+	height: 150px;
 	z-index: 10;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-
+	@media screen and (min-width: $tabwidth) {
+		height: 250px;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 400px;
+	}
 }
 .hero-headline-box {
-	width: 100%;
+	width: 90%;
 	position: absolute;
-	top: 10%;
+	bottom: 5%;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
 	line-height: 1.2;
+	z-index: 11;
 
 	@media screen and (min-width: $tabwidth) {
 		top: 62%;
+		width: 100%;
 	}	
 }
-.hero-headline, .hero-headline-sub-1, .hero-headline-sub-2
+.hero-headline-sub-1, .hero-headline-sub-2
 {
 	width: 100%;
 	text-align: center;
@@ -83,9 +93,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	font-weight: 300;
 }
 .hero-headline {
+	width: 100%;
+	text-align: center;
+	color: #fff;
 	font: {
 		family: $font__heading;
 		size: 24px;
+		weight: 400;
 	}
 	margin: 0 0 10px 0;
 	@media screen and (min-width: $tabwidth) {
@@ -110,6 +124,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 }
 section.intro {
 	margin-bottom: 30px;
+
 	.home-intro-content {
 		width: 100%;
 		margin: 0px auto;
@@ -122,7 +137,14 @@ section.intro {
 			font: {
 				family: $font__heading;
 				size: 40px;
-				weight: 300;
+				weight: 400;
+			}
+		}
+		p {
+			font: {
+				family: $font__main;
+				size: 18px;
+				weight: 400;
 			}
 		}
 		
@@ -131,14 +153,19 @@ section.intro {
 		}
 		@media screen and (min-width: $deskwidth) {
 			width: 70%;
-			padding: 20px 10%;
+			padding: 70px 10% 30px 10%;
 		}
 	}
 	.link-square {
-		width: 28%;
-		margin: 2%;
-		float: left;
+		width: 90%;
+		margin: 10px auto;
+		
 		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 28%;
+			margin: 2%;
+			float: left;
+		}
 
 		.wrapme {
 			padding: 5%;
@@ -370,10 +397,14 @@ section.about {
 	.map-wrapper {
 		width: 100%;
 		height: 100%;
-		position: absolute;
+		position: relative;
 		z-index: 4;
-		top: 0;
-		left: 0;
+		
+		@media screen and (min-width: $midwidth) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 	.map-contents {
 		width: 100%;
@@ -390,14 +421,15 @@ section.about {
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
 
 		@media screen and (min-width: $tabwidth) {
-			width: 40%;
+			
 			height: 100%;
 			
 			font-size: 14px;
 		}
 		@media screen and (min-width: $midwidth) {
+			width: 40%;
 			font-size: 16px;
-			padding: 5% 15% 5% 5%;
+			padding: 5% 5% 5% 5%;
 		}
 		@media screen and (min-width: $deskwidth) {
 			padding: 5% 15% 5% 5%;
@@ -428,6 +460,8 @@ section.news-resources {
 	overflow: hidden;
 	background-color: $color-light-grey;
 	color: #fff;
+	padding: 20px 0 30px 0;
+	clear: both;
 	
 	h2 {
 		text-transform: uppercase;
@@ -450,6 +484,8 @@ section.news-resources {
 	article {
 		width: 100%;
 		color: #fff;
+		overflow-wrap: break-word;
+  		word-wrap: break-word;
 		font: {
 			family: $font__main;
 			weight: 300;
@@ -538,7 +574,7 @@ section.focus-areas {
 			font: {
 				family: $font__heading;
 				style: 700;
-				size: 20px;
+				size: 28px;
 			}
 
 			@media screen and (min-width: $tabwidth) {
@@ -681,9 +717,10 @@ section.focus-areas {
 	h3 {
 		margin: 0 0 10px 0;
 		line-height: 1;
+		text-transform: uppercase;
 		font: {
 			family: $font__heading;
-			style: 700;
+			weight: 400;
 			size: 20px;
 		}
 
@@ -819,15 +856,29 @@ section.assignment-links {
 	
 
 	ul {
-		width: 50%;
+		width: 100%;
 		display: inline-block;
-		margin: 40px 0 0 15%;
+		margin: 40px 0 0 ;
+
+		@media screen and (min-width: $tabwidth) {
+		
+			margin: 40px 0 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 50%;
+			margin: 40px 0 0 15%;
+		}
 	}
 	li {
-		width: 45%;
-		float: left;
-		text-align: left;
+		width: 100%;
+		text-align: center;
 		list-style: none;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 45%;
+			float: left;
+			text-align: left;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -877,6 +928,7 @@ section.completed {
 		position: relative;
 		width: 100%;
 		float: left;
+		margin: 10px auto;
 
 		& .completed-square {
 			position: absolute;
@@ -1054,24 +1106,34 @@ section.completed {
 	}
 }
 article.news-first-post {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #BBBDC0;
+
 	@media screen and (min-width: $tabwidth) {
 		border-right: 1px solid #BBBDC0;
+		border-bottom: 0px solid #BBBDC0;
 		margin:  2% 2% 60px 2%;
 		float: left;
 	}
 }
 article.news-last-post {
-	
+	margin-bottom: 30px;
+	border-bottom: 1px solid #BBBDC0;
 
 	@media screen and (min-width: $tabwidth) {
 		margin: 2% 2% 60px 2%;
 		float: left;
+		border-bottom: 0px solid #BBBDC0;
 	}
 }
 
 article.news-post {
 	width: 100%;
 	position: relative;
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 0 3% 20px 3%;
+
 	font: {
 		size: 14px;
 		family: $font__main;
@@ -1080,7 +1142,7 @@ article.news-post {
 
 	@media screen and (min-width: $tabwidth) {
 		width: 29.3%;
-		padding: 0 3%;
+		padding: 0 3% 0 3%;
 	}
 
 	h2 {
@@ -1226,7 +1288,7 @@ section.professionals {
 .profess-popup {
 	width: 100%;
 	background-color: #000;
-	height: 100%;
+	
 	overflow: hidden;
 	display: block;
 	padding-bottom: 40%;
@@ -1238,6 +1300,7 @@ section.professionals {
 
 	@media screen and (min-width: $tabwidth) {
 		margin-top: 0px;
+		height: 100%;
 	}
 	@media screen and (min-width: $midwidth) {
 		// margin-top: 160px;
@@ -1282,7 +1345,7 @@ section.professionals {
 }
 .pop-image {
 	width: 100%;
-	height: 100%;
+	height: 400px;
 	z-index: 7;
 	position: relative;
 	background-color: #000;
@@ -1290,9 +1353,10 @@ section.professionals {
 	background-position: right;
 	background-repeat: no-repeat;
 
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $midwidth) {
 		// width: 45%;
 		position: fixed;
+		height: 100%;
 		top: 0;
 		right: 0;
 	}
@@ -1304,7 +1368,7 @@ section.professionals {
 }
 .pop-content {
 	color: #fff;
-	width: 40%;
+	width: 90%;
 	float: left;
 	position: relative;
 	z-index: 10;
@@ -1313,12 +1377,28 @@ section.professionals {
 	// background-color: #000; 
 	// height: 80%;
 	// overflow: scroll;
+	@media screen and (min-width: $tabwidth) {
+		width: 60%;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 40%;
+	}
 
-	.position {
+	h2 {
+		margin: 0;
+		line-height: 1;
 		font: {
 			family: $font__heading;
-			//size: 24px;
+			size: 36px;
 			weight: 300;
+		}
+	}
+	.position {
+		margin-bottom: 10px;
+		font: {
+			family: $font__heading;
+			size: 24px;
+			weight: 400;
 		}
 	}
 }
@@ -1341,12 +1421,17 @@ section.experience {
 		position: absolute;
 		top: 0;
 		z-index: 10;
+		display: none;
 
 		img {
 			width: 100%;
 			opacity: 0.2;
 			position: relative;
 			z-index: 9;
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			display: block;
 		}
 	}
 	
@@ -1478,18 +1563,28 @@ nav.sub-nav {
 		display: inline-block;
 		font-size: 14px;
 		text-transform: lowercase;
+		width: 100%;
+
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+		}
 	}
 	a {
 		color: #A9A9A9;
-		padding: 10px 10px;
+		padding: 10px 0;
 		text-decoration: none;
 		@include transition(all ease .3s);
+		@media screen and (min-width: $tabwidth) {
+			padding: 10px 10px;
+		}
+
 		&:hover {
 			color: $color-red;
 		}
 	}
 	ul {
 		margin: 0;
+		padding: 0;
 	}
 }
 .with-pad {}
@@ -1497,11 +1592,16 @@ nav.sub-nav {
 	width: 100%;
 	position: relative;
 
+
 	img {
 		width: 100%;
 		position: absolute;
 		top: 0;
 		opacity: .2;
+		display: none;
+		@media screen and (min-width: $tabwidth) {
+			display: block;
+		}
 	}
 }
 .pusher {
@@ -1522,6 +1622,7 @@ nav.sub-nav {
 			list-style:none;
 			display:inline;
 			width: 100%;
+			float: left;
 			font: {
 				family: $font__heading;
 				size: 12px;
@@ -1544,6 +1645,7 @@ nav.sub-nav {
 			border-right: 1px solid $color-light-grey;
 			border-left: 1px solid $color-light-grey;
 			width: 100%;
+			@include transition(.3s ease all);
 			@media screen and (min-width: $tabwidth) {
 				padding:20px 15px;
 			}
@@ -1552,9 +1654,12 @@ nav.sub-nav {
 				width: auto;
 			}
 		}
-		a.active {
+		a.active, a:hover {
 			background:$color-red;
 			color:#fff;
+			border-top: 1px solid $color-red;
+			border-right: 1px solid $color-red;
+			border-left: 1px solid $color-red;
 		}
 	}
 	
@@ -1571,16 +1676,28 @@ nav.other-positions {
 		}
 	}
 }
+.prev-post, .next-post {
+	width: 100%;
+	margin-bottom: 20px;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+	}
+}
 .prev-post a, .next-post a {
 	padding: 5px;
 	background-color: $color-red;
 	color: #fff;
 	text-decoration: none;
-	width: auto;
+	width: 100%;
+	display: block;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+	}
 }
 .prev-post {
 	float: left;
 }
 .next-post {
 	float: right;
+	text-align: right;
 }

@@ -10,11 +10,12 @@
  */
 
 ?>
-<div class="center"><?php get_template_part('template-parts/social-footer'); ?></div>
+
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="center"><?php get_template_part('template-parts/social-footer'); ?></div>
 		<div class="wrapper">
 			<div class="site-info">
 				<?php 
@@ -35,7 +36,7 @@
 
 				// Footer Left
 				echo '<div class="footer-right">';
-					echo '<a href="'. $sitemap . '">Sitemap</a> // Site by <a href="http://bellworksweb.com/?ref=colemanlew">Bellaworks</a>';
+					echo '<a href="'. $sitemap . '">Sitemap</a> // Site by <a target="_blank" href="http://bellaworksweb.com/?ref=colemanlew">Bellaworks</a>';
 				echo '</div><!-- footer right -->';
 				 
 				 ?>
