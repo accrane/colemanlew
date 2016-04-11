@@ -145,6 +145,11 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 <?php endif; ?>
 </div><!-- wrapper -->
 </section>	
+<script type="text/javascript">
 
+jQuery(document).ready(function ($) {
+
+});// END #####################################    END
+</script>
 <?php
 get_footer();
