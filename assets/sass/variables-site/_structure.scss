@@ -90,10 +90,10 @@ header#masthead {
 
 	@media screen and (min-width: $midwidth) {
 		overflow: visible;
-		height: 160px;
+		height: 170px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		height: 118px;
+		height: 140px;
 	}
 }
 body.home header#masthead {
@@ -221,9 +221,10 @@ main.single {
 /* Logo */
 .logo , h1.logo {
 	width: 280px;
-	height: 76px;
+	// height: 76px;
+	height: 107px;
 	background: {
-		image: url(images/logo.png);
+		image: url(images/logo-new.png);
 		size: cover;
 		repeat: no-repeat;
 	}
@@ -231,7 +232,8 @@ main.single {
 
 	@media screen and (min-width: $tabwidth) {
 		width: 202px;
-		height: 55px;
+		// height: 55px;
+		height: 77px;
 		
 	}
 	@media screen and (min-width: $midwidth) {
@@ -240,31 +242,36 @@ main.single {
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 202px;
-		height: 55px;
+		// height: 55px;
+		height: 77px;
 		margin: 20px 0 0 ;
 	}
 	@media screen and (min-width: $largedeskwidth) {
 		width: 280px;
-		height: 76px;
+		// height: 76px;
+		height: 107px;
 		margin: 0;
 	}
 }
 .logo a, h1.logo a {
 	width: 280px;
-	height: 76px;
+	// height: 76px;
+	height: 107px;
 	display: block;
 	text-indent: -9000px;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 200px;
-		height: 55px;
+		width: 202px;
+		// height: 55px;
+		height: 77px;
 	}
 	@media screen and (min-width: $midwidth) {
 		
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 280px;
-		height: 76px;
+		// height: 76px;
+		height: 107px;
 	}
 }
 .top-header	{
@@ -389,6 +396,13 @@ footer.site-footer {
 .icon--plus-black > path {
     
     fill: $color-dark-black;
+    stroke: rgba(255,255,255,0);
+    stroke-width: 0.5;
+    // stroke-linejoin: round;
+}
+.icon--plus-red > path {
+    
+    fill: $color-red;
     stroke: rgba(255,255,255,0);
     stroke-width: 0.5;
     // stroke-linejoin: round;

@@ -17,20 +17,7 @@ $categories=get_terms( 'focus_area', $cat_args );
 ?>
 
 <nav class="sub-nav">
-
-	<li class="first-in-nav">
-		<a href="<?php bloginfo('url'); ?>/focus-areas">focus areas</a>
-	</li>
-
-	<?php foreach($categories as $category) : 
-
-		echo '<li>';
-			echo '<a href="'. get_bloginfo('url') . '/focus-area' . '/' . $category->slug . '">';
-				echo $category->name;
-			echo '</a>';
-		echo '</li>';
-	endforeach;
-	?>
+	<?php wp_nav_menu( array( 'theme_location' => 'focus-areas' ) ); ?>
 </nav>	
 
 

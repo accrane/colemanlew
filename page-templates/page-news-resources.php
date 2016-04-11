@@ -37,7 +37,7 @@ get_header(); ?>
 	 			<div class="readmore">
 	 				<a href="<?php the_permalink(); ?>">Continue Reading</a>
 	 				<div class="plus">
-		 				<svg class="icon  icon--plus-black" viewBox="0 0 5 5" >
+		 				<svg class="icon  icon--plus-red" viewBox="0 0 5 5" >
 						    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
 						</svg>
 					</div><!-- plus -->

@@ -5,7 +5,7 @@
 
 get_header(); ?>
 <nav class="sub-nav with-pad">
-	<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 456 ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'capabilities' ) ); ?>
 </nav>
 <?php
 while ( have_posts() ) : the_post(); 

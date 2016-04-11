@@ -8,7 +8,7 @@
 	<?php if(is_front_page()) { ?>
 	<h2 class="js-last-word"><a href="<?php bloginfo('url'); ?>/our-search-process">Our Search Process</a></h2>
 	<?php } else { ?>
-		<h3 class="our-four-step">Our 4 step Process.</h3>
+		<h3 class="our-four-step"><?php the_field('section_title'); ?></h3>
 	<?php } ?>
 	<?php 
 	$i=0;
