@@ -39,7 +39,8 @@ jQuery(document).ready(function ($) {
 		$('.flexslider-story').flexslider({
 			animation: "slide",
 			smoothHeight: true,
-			slideshowSpeed: 10000
+			slideshowSpeed: 10000,
+			pauseOnAction: true
 			// start: function() {
 	  //           var height = $(".flexslider-story ul.slides").first().height();
 	  //           console.log(height);
