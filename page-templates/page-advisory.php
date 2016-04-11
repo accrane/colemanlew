@@ -5,7 +5,7 @@
 
 get_header(); ?>
 <nav class="sub-nav with-pad">
-	<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 5 ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'about' ) ); ?>
 </nav>
 <div class="content-wrapper">
 	<div id="primary" class="content-area">

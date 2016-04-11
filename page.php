@@ -19,7 +19,7 @@ get_header(); ?>
 		<?php wp_nav_menu( array( 'theme_location' => 'about' ) ); ?>
 	</nav>
 <?php } ?>
-<?php if(is_tree(451)) { ?>
+<?php if(is_tree(456)) { ?>
 	<nav class="sub-nav with-pad">
 		<?php wp_nav_menu( array( 'theme_location' => 'capabilities' ) ); ?>
 	</nav>
