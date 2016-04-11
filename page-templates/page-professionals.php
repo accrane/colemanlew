@@ -15,7 +15,12 @@ $boxLink = get_field('box_link');
 ?>
 <nav class="sub-nav with-pad">
 	
-		<?php wp_list_pages( array( 'title_li' => '', 'child_of' => 5 ) ); ?>
+		<?php wp_list_pages( array( 
+				'title_li' => '', 
+				// 'child_of' => 5, 
+				'sort_column' => 'menu_order', 
+				'include' => array('5', 197, 187, 140, 189, 191)
+			) ); ?>
 	
 </nav>
 <div class="small-wrapper">

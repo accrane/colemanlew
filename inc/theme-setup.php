@@ -38,6 +38,9 @@ function acstarter_setup() {
   register_nav_menus( array(
     'primary' => esc_html__( 'Primary', 'acstarter' ),
     'topheader' => esc_html__( 'Top Header', 'acstarter' ),
+    'about' => esc_html__( 'About Sub Nav', 'acstarter' ),
+    'capabilities' => esc_html__( 'Capabilities Sub Nav', 'acstarter' ),
+    'focus-areas' => esc_html__( 'Focus Areas Sub Nav', 'acstarter' ),
     'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
   ) );
 
