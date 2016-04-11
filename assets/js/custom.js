@@ -40,7 +40,8 @@ jQuery(document).ready(function ($) {
 			animation: "slide",
 			smoothHeight: true,
 			slideshowSpeed: 10000,
-			pauseOnAction: true
+			// pauseOnAction: true,
+			slideshow: false
 			// start: function() {
 	  //           var height = $(".flexslider-story ul.slides").first().height();
 	  //           console.log(height);
@@ -154,6 +155,7 @@ jQuery(document).ready(function ($) {
 		rel: 'people',
 		width: '100%', 
 		height: '100%',
+
 		// scrolling: true
 		 //fixed: true
 	});

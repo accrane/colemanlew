@@ -143,7 +143,9 @@
 	    	top: 5px;
 	    }
 	}
-	li.current-menu-item::after {
+	li.dropdown.current-menu-item::after,
+	li.dropdown:hover::after {
+
 		@media screen and (min-width: $midwidth) {
 			content: url(images/arrow-hover.png);
 		    width: 8px;

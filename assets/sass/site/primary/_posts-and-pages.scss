@@ -1364,6 +1364,7 @@ section.professionals {
 		width: 100%;
 		position: relative;
 		z-index: 7;
+		border-left: 1px solid #fff;
 	}
 }
 .pop-content {
@@ -1623,6 +1624,7 @@ nav.sub-nav {
 			display:inline;
 			width: 100%;
 			float: left;
+			margin-right: 1px;
 			font: {
 				family: $font__heading;
 				size: 12px;
@@ -1641,9 +1643,9 @@ nav.sub-nav {
 			background: $color-light-grey;
 			color:#fff;
 			text-decoration:none;
-			border-top: 1px solid $color-light-grey;
-			border-right: 1px solid $color-light-grey;
-			border-left: 1px solid $color-light-grey;
+			// border-top: 1px solid #fff;
+			// border-right: 1px solid #fff;
+			// border-left: 1px solid #fff;
 			width: 100%;
 			@include transition(.3s ease all);
 			@media screen and (min-width: $tabwidth) {
@@ -1657,9 +1659,9 @@ nav.sub-nav {
 		a.active, a:hover {
 			background:$color-red;
 			color:#fff;
-			border-top: 1px solid $color-red;
-			border-right: 1px solid $color-red;
-			border-left: 1px solid $color-red;
+			// border-top: 1px solid $color-red;
+			// border-right: 1px solid $color-red;
+			// border-left: 1px solid $color-red;
 		}
 	}
 	
