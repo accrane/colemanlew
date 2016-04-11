@@ -49,9 +49,13 @@ jQuery(document).ready(function ($) {
 		}); // end register 
 	}());
 
+	function goToByScroll(id){
+		if ($.getUrlVar("focus_area") != null) {
 
-
-	
+		
+	    	$('html,body').animate({scrollTop: $("#assignments"+id).offset().top},'slow');
+		}
+	}
 
 
 	(function() {
@@ -252,56 +256,6 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
     });
   });
-
-/*
-	*
-	*	A Function to sniff url params
-	*
-	------------------------------------*/
-(function() {
-    var params = null;
-    this.l = typeof Location !== "undefined" ? Location.prototype : window.location;
-    this.l.getParameter = function(name) {
-        return Array.prototype.slice.apply(this.getParameterValues(name))[0];
-    };
-    this.l.getParameterMap = function() {
-        if (params === null) {
-            params = {};
-            this.search.substr(1).split("&").map(function(param) {
-                if (param.length === 0) return;
-                var parts = param.split("=", 2).map(decodeURIComponent);
-                if (!params.hasOwnProperty(parts[0])) params[parts[0]] = [];
-                params[parts[0]].push(parts.length == 2 ? parts[1] : null);
-            });
-        }
-        return params;
-    };
-    this.l.getParameterNames = function() {
-        var map = this.getParameterMap(), names = [];
-        for (var name in map) {
-            if (map.hasOwnProperty(name)) names.push(name);
-        }
-        return names;
-    };
-    this.l.getParameterValues = function(name) {
-        return this.getParameterMap()[name];
-    };
-})();
-
-/*
-	*
-	*	Smooth Scroll to the assignments when the url param exsits.
-	*
-	------------------------------------*/
-	if (typeof location.getParameter("focus_area") !== "undefined") {
-
-		//console.log('smooth scroll works');
-    	$('html, body').animate({
-	        scrollTop: $("#assignments").offset().top
-		}, 2000);
-	}
-
-	
 
 });// END #####################################    END
 
