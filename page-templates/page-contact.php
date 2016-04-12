@@ -18,12 +18,21 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<?php
+							$content = get_field('contact_info');
+							$map = get_field('map');
+							$aboveForm = get_field('above_form');
+							$form_object = get_field('form');
 
-							the_content();
+
+							echo $content;
 
 							
 						?>
 					</div><!-- .entry-content -->
+
+					<div class="map">
+						<?php echo $map; ?>
+					</div>
 
 					
 				</article><!-- #post-## -->
@@ -38,7 +47,11 @@ get_header(); ?>
 	<?php //dynamic_sidebar( 'sidebar-1' ); ?>
 
 	<div class="widget">
-		<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+		<?php echo $aboveForm; ?>
+	</div>
+
+	<div class="widget">
+		<?php echo do_shortcode('[gravityform id="' . $form_object['id'] . '" title="false" description="false" ajax="false"]'); ?>
 	</div>
 
 </aside><!-- #secondary -->
