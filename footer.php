@@ -26,7 +26,7 @@
 				echo '<div class="footer-left">';
 					echo $address;
 					echo '<br>';
-					echo '&copy;' . date('Y');
+					echo '&copy;' . date('Y') . ' ';
 					echo get_bloginfo('name');
 					echo ' // ';
 					echo '<a href="'. get_bloginfo('url') . '/privacy-statement">Privacy Statement</a>';
