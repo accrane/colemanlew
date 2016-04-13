@@ -1240,7 +1240,7 @@ nav.sub-nav li{display:inline-block;font-size:14px;text-transform:lowercase;widt
 @media screen and (min-width:600px){nav.sub-nav li{width:auto}
 }nav.sub-nav a{color:#a9a9a9;padding:10px 0;text-decoration:none;-webkit-transition:all ease .3s;transition:all ease .3s}
 @media screen and (min-width:600px){nav.sub-nav a{padding:10px 10px}
-}nav.sub-nav a:hover{color:#d61e36}
+}nav.sub-nav a:hover,nav.sub-nav a.active{color:#d61e36}
 nav.sub-nav ul{margin:0;padding:0}
 .tax-hero{width:100%;position:relative}
 .tax-hero img{width:100%;position:absolute;top:0;opacity:.2;display:none}

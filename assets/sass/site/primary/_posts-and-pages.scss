@@ -1579,7 +1579,7 @@ nav.sub-nav {
 			padding: 10px 10px;
 		}
 
-		&:hover {
+		&:hover, &.active {
 			color: $color-red;
 		}
 	}

@@ -38,7 +38,7 @@ get_header(); ?>
 		'format' => 'custom',
 		'before' => '<li>',
 		'after' => '<div class="plus">
-		 				<svg class="icon  icon--plus-black" viewBox="0 0 5 5" >
+		 				<svg class="icon  icon--plus-red" viewBox="0 0 5 5" >
 						    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
 						</svg>
 					</div><!-- plus --></li>'
