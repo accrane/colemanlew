@@ -75,6 +75,18 @@ $navCategories = get_terms( 'focus_area', $navArgs );
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 				
+
+				
+				<div class="tax-view-listings">
+	 				<a href="<?php the_permalink(); ?>">View examples of completed <?php echo $name ?> assignments ></a>
+	 				<div class="plus">
+		 				<svg class="icon  icon--plus-black" viewBox="0 0 5 5" >
+						    <path d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" />
+						</svg>
+					</div><!-- plus -->
+	 			</div>
+	 			
+
 			</main>
 		</div><!-- content area -->
 

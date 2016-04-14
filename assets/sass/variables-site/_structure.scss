@@ -422,3 +422,28 @@ footer.site-footer {
     stroke-width: 0.5;
     // stroke-linejoin: round;
 }
+.tax-view-listings {
+	width: auto;
+	display: inline-block;
+	position: relative;
+	float: left;
+	
+	.plus {
+		width: 20px;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		@include transition(all .3s ease);
+		@media screen and (min-width: $tabwidth) {
+			width: 10px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 20px;
+	}
+	}
+	&:hover {
+		.plus {
+			right: 0px;
+		}
+	}
+}
