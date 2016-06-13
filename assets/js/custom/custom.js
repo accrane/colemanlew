@@ -109,6 +109,25 @@ jQuery(document).ready(function ($) {
 
         heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
     });
+
+    /*
+	*
+	*	Make last word in H1 red
+		Double last name EX: Phd.,
+	*
+	------------------------------------*/
+	$('.js-double-word').each(function(index, element) {
+        var heading = $(element);
+        var word_array, last_word, first_part;
+
+        word_array = heading.html().split(/\s+/); // split on spaces
+        next_last_word = word_array.pop();
+        last_word = word_array.pop();             // pop the last word
+        first_part = word_array.join(' ');        // rejoin the first words together
+        last_part = last_word.concat(' ', next_last_word);
+
+        heading.html([first_part, ' <span class="last-word">', last_part, '</span>'].join(''));
+    });
     
 	/*
 	*

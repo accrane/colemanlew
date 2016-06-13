@@ -20,6 +20,14 @@ wp_head(); ?>
     $largesize = 'professional';
     $title = get_the_title();
 
+    $personID = get_the_ID();
+
+    if( $personID == 818 ){
+    	$wordClass = 'double';
+    } else{
+    	$wordClass = 'last';
+    }
+
 		// echo '<pre>';
 		// print_r($image);
 		// echo '</pre>';
@@ -37,7 +45,7 @@ wp_head(); ?>
     		<div class="pop-fade-wrap">
     			<!-- <div class="pop-fade"></div> -->
     			<div class="pop-content">
-    				<h2 class="js-last-word"><?php the_title(); ?></h2>
+    				<h2 class="js-<?php echo $wordClass; ?>-word"><?php the_title(); ?></h2>
     				<?php if( $position != '' ) {
 		    			echo '<div class="position">'.$position.'</div>';
 		    		} ?>
