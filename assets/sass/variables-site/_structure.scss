@@ -361,8 +361,8 @@ footer.site-footer {
 	width: 100%;
 	position: relative;
 	z-index: 1;
-	clear: both;
-	padding-bottom: 20px;
+	float: left;
+	// padding-bottom: 20px;
 	overflow: hidden;
 	a {
 		text-decoration: none;
@@ -390,10 +390,83 @@ footer.site-footer {
 		}
 	}
 	
+	
+	.site-info {
+		width: 100%;
+		position: relative;
+		float: left;
+		@media screen and (min-width: $tabwidth) {
+			padding: 50px 0 50px 5%;
+			width: 70%;	
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+}
+.partnership {
+	width: 100%;
+	float: right;
+	padding: 20px 0;
+	text-align: center;
+	position: relative;
+	
+	overflow: hidden;
 	@media screen and (min-width: $tabwidth) {
+		width: 30%;
+		float: right;
+		padding: 20px 0% 20px 0;
+	}
+	a {
+		width: 100%;
+		position: absolute;
+		top: 0; 
+		left: 0;
+		height: 100%;
+		background-color: $color-dark-grey;
+		&:hover .rollover img {
+			filter: grayscale(0);
+		}
+		&:hover {
+			background-color: #fff;
+			h3 {
+				&::after {
+					content: '';
+					width: 60%;
+					border-bottom: 1px solid $color-dark-grey;
+					position: absolute; 
+					bottom: -5px;
+					left: 20%;
+				}
+			}
+		}
 		
 	}
-	@media screen and (min-width: $deskwidth) {
+	.rollover {
+		width: 100%;
+		float: left;
+		img {
+			width: 80%;
+			margin: 0 auto;
+			filter: grayscale(1);
+			filter: brightness(100);
+		}
+	}
+	h3 {
+		width: auto;
+		display: inline-block;
+		position: relative;
+		font-weight: normal;
+		margin: 20px auto;
+		font-size: 16px;
+		&::after {
+			content: '';
+			width: 60%;
+			border-bottom: 1px solid #fff;
+			position: absolute; 
+			bottom: -5px;
+			left: 20%;
+		}
 		
 	}
 }
