@@ -50,7 +50,7 @@
 	
 	<div class="partnership js-blocks">
 	 	<a href="http://www.penrhyn.com/" target="_blank">
-	 		<h3>Gobal Strategic Partners</h3>
+	 		<h3>Global Strategic Partners</h3>
 	 		<div class="rollover">
 	 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/partnership.png">
 	 		</div>
