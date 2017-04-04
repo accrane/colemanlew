@@ -51,8 +51,11 @@
 	<div class="partnership js-blocks">
 	 	<a href="http://www.penrhyn.com/" target="_blank">
 	 		<h3>Global Strategic Partners</h3>
-	 		<div class="rollover">
-	 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/partnership.png">
+	 		<div class="rollover-up">
+	 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/partnership-up.png">
+	 		</div>
+	 		<div class="rollover-over">
+	 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/partnership-over.png">
 	 		</div>
 	 	</a>
 	 

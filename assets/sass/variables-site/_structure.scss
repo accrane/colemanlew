@@ -367,7 +367,7 @@ footer.site-footer {
 	a {
 		text-decoration: none;
 		color: #fff;
-		@include transition(all .3s ease);
+		// @include transition(all .3s ease);
 		&:hover {
 			color: $color-red;
 		}
@@ -412,12 +412,13 @@ footer.site-footer {
 	padding: 20px 0 120px 0;
 	text-align: center;
 	position: relative;
-	
 	overflow: hidden;
+	margin-top: 40px;
 	@media screen and (min-width: $tabwidth) {
 		width: 30%;
 		float: right;
-		padding: 20px 0% 20px 0;
+		padding: 20px 0% 50px 0;
+		margin: 0;
 	}
 	a {
 		width: 100%;
@@ -426,11 +427,15 @@ footer.site-footer {
 		left: 0;
 		height: 100%;
 		background-color: $color-dark-grey;
+		@include transition(all ease .0s);
 		&:hover .rollover img {
-			filter: grayscale(0);
+			// filter: grayscale(0);
 		}
 		&:hover {
 			background-color: #fff;
+			.rollover-up {
+				opacity: 0;
+			}
 			h3 {
 				&::after {
 					content: '';
@@ -443,6 +448,34 @@ footer.site-footer {
 			}
 		}
 		
+	}
+	.rollover-up, .rollover-over {
+		width: 100%;
+		position: absolute;
+		margin-top: 50px;
+		top: 0;
+		left: 0;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 70px;
+		}
+		@media screen and (min-width: $midwidth) {
+			margin-top: 70px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			margin-top: 70px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.rollover-over {
+		z-index: 1;
+	}
+	.rollover-up {
+		z-index: 2;
+		&:hover {
+			opacity: 0;
+		}
 	}
 	.rollover {
 		width: 100%;

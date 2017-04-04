@@ -610,7 +610,7 @@ div{white-space:wrap}
 }article .readmore{width:auto;position:relative;display:inline-block;text-transform:uppercase}
 article .plus{width:20px;position:absolute;top:0;right:0}
 footer.site-footer{background-color:#404041;color:#fff;font-size:12px;width:100%;position:relative;z-index:1;float:left;overflow:hidden}
-footer.site-footer a{text-decoration:none;color:#fff;-webkit-transition:all .3s ease;transition:all .3s ease}
+footer.site-footer a{text-decoration:none;color:#fff}
 footer.site-footer a:hover{color:#d61e36}
 footer.site-footer .footer-left{width:auto}
 @media screen and (min-width:600px){footer.site-footer .footer-left{float:left}
@@ -618,14 +618,22 @@ footer.site-footer .footer-left{width:auto}
 @media screen and (min-width:600px){footer.site-footer .footer-right{float:right}
 }footer.site-footer .site-info{width:100%;position:relative;float:left;text-align:center}
 @media screen and (min-width:600px){footer.site-footer .site-info{padding:50px 0 50px 5%;width:70%;text-align:left}
-}.partnership{width:100%;float:right;padding:20px 0 120px 0;text-align:center;position:relative;overflow:hidden}
-@media screen and (min-width:600px){.partnership{width:30%;float:right;padding:20px 0 20px 0}
-}.partnership a{width:100%;position:absolute;top:0;left:0;height:100%;background-color:#404041}
-.partnership a:hover .rollover img{-webkit-filter:grayscale(0);filter:grayscale(0)}
+}.partnership{width:100%;float:right;padding:20px 0 120px 0;text-align:center;position:relative;overflow:hidden;margin-top:40px}
+@media screen and (min-width:600px){.partnership{width:30%;float:right;padding:20px 0 50px 0;margin:0}
+}.partnership a{width:100%;position:absolute;top:0;left:0;height:100%;background-color:#404041;-webkit-transition:all ease 0s;transition:all ease 0s}
 .partnership a:hover{background-color:#fff}
+.partnership a:hover .rollover-up{opacity:0}
 .partnership a:hover h3::after{content:'';width:60%;border-bottom:1px solid #404041;position:absolute;bottom:-5px;left:20%}
+.partnership .rollover-up,.partnership .rollover-over{width:100%;position:absolute;margin-top:50px;top:0;left:0}
+@media screen and (min-width:600px){.partnership .rollover-up,.partnership .rollover-over{margin-top:70px}
+}@media screen and (min-width:900px){.partnership .rollover-up,.partnership .rollover-over{margin-top:70px}
+}@media screen and (min-width:1200px){.partnership .rollover-up,.partnership .rollover-over{margin-top:70px}
+}.partnership .rollover-up img,.partnership .rollover-over img{width:100%}
+.partnership .rollover-over{z-index:1}
+.partnership .rollover-up{z-index:2}
+.partnership .rollover-up:hover{opacity:0}
 .partnership .rollover{width:100%;float:left}
-.partnership .rollover img{width:80%;margin:0 auto;-webkit-filter:grayscale(1);filter:grayscale(1);-webkit-filter:brightness(100);filter:brightness(100)}
+.partnership .rollover img{width:80%;margin:0 auto;-webkit-filter:brightness(100);filter:brightness(100)}
 .partnership h3{width:auto;display:inline-block;position:relative;font-weight:normal;margin:20px auto;font-size:16px}
 .partnership h3::after{content:'';width:60%;border-bottom:1px solid #fff;position:absolute;bottom:-5px;left:20%}
 .icon{display:inline-block;vertical-align:middle}
